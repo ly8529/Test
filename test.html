@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>搜披露-沪深股市披露检查</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/SearchMain.css">
+	<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+	<script type="text/javascript" src="./js/SearchMain.js"></script>
+	<!--[if lte IE 9]>
+		<script src="./js/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<!-- Nav Start -->
+<nav class="nav">
+	<div class="logo"></div>
+	<ul class="top-nav">
+		<li class="active"><a href="SearchMain.html">沪深</a></li>
+		<li><a href="SearcOtc.html"><span class="icon">Xs</span>新三板</a></li>
+		<li><a href="SearchUs.html">美股</a></li>
+		<li><a href="SearchInteraction.html">互动平台</a></li>
+		<li><a href="SearchLaw.html">法规</a></li>
+		<li><a href="Help.html">帮助</a></li>
+	</ul>
+	<div class="user"></div>
+</nav>
+<!-- Nav End -->
+<!-- Main Start -->
+<section class="mainWrap">
+	<!-- left Start -->
+	<section class="left-main">
+		<div class="main-top">
+			<!-- Search Start -->
+			<div class="search-wrap">
+				<div class="date-select">
+					<a class="date-text" id="date-text" href="javascript:void(0)">日期
+						<span></span>
+					</a>
+					<ul id="lst_periods" class="lst_periods">
+	                    <li><a href="javascript:void(0)" class="date">最近一周</a></li>
+	                    <li><a href="javascript:void(0)" class="date">最近一月</a></li>
+	                    <li><a href="javascript:void(0)" class="date">最近三月</a></li>
+	                    <li><a href="javascript:void(0)" class="date">最近六月</a></li>
+	                    <li><a href="javascript:void(0)" class="date">最近一年</a></li>
+	                    <li><a href="javascript:void(0)" class="date">最近三年</a></li>
+	                    <li><a href="javascript:void(0)" class="date">2016年</a></li>
+	                    <li><a href="javascript:void(0)" class="date">2015年</a></li>
+	                    <li><a href="javascript:void(0)" class="date">2014年</a></li>
+	                    <li><a href="javascript:void(0)" class="date">2013年</a></li>
+	                    <li><a href="javascript:void(0)" class="date">全部时间</a></li>
+	                    <li>
+	                    	<input id="input_ds" name="ds" type="text" class="date-input">
+	                    	<span class="">-</span>
+	                    	<input id="input_de" name="de" type="text" class="date-input">
+	                    	<a id="date-btn" class="btn">确定</a>
+	                    </li>
+	                </ul>
+				</div>
+				<div class="code-search">
+					<input name="c" id="input_stockcode" type="text" class="code" placeholder="公司代码/简称" autocomplete="off" data-provide="typeahead">
+				</div>
+				<div class="input-search">
+					<input class="text-btn" type="text" placeholder="hah "><button class="search-btn"><span>search</span></button>
+				</div>
+				<div class="senior-search">
+					<a href="">高级搜索<span></span></a>
+				</div>
+			</div>
+			<!-- Search End -->
+			<div class="label-wrap" id="label-wrap">
+				<a class="filter-label market" href="">市场<span class="filter-close">x</span></a>
+				<a class="filter-label notice" href="">公告<span class="filter-close">x</span></a>
+				<a class="filter-label industry" href="">行业<span class="filter-close">x</span></a>
+				<a class="filter-label local" href="">地域<span class="filter-close">x</span></a>
+				<a class="filter-label company" href="">公司<span class="filter-close">x</span></a>
+				<input id="" class="btn" type="submit" value="确定">
+			</div>
+		</div>
+		
+		<!-- content Start -->
+		<div class="content">
+			<div class="content-show">
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href=""><span></span></a>
+				<a href="" class="getMore">查看更多</a>
+			</div>
+		</div>
+		<!-- content End -->
+	</section>
+	<!-- left End -->
+	<!-- right Start -->
+	<section class="right-filter">
+		<div class="filter-wrap">
+			<ul>
+				<li>
+					<a id="btn_noticePanel" class="filter-title" href="">市场类型</a>
+					<div class="filter-list active">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+					<div id="div_noticePanel" style="padding: 10px; background-color: rgb(242, 242, 242); position: absolute; border-radius: 5px; left: -640px;">
+						<div></div>
+					</div>
+				</li>
+				<li>
+					<a class="filter-title" href="">公告类型</a>
+					<div class="filter-list">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+				<li>
+					<a class="filter-title" href="">行业</a>
+					<div class="filter-list">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+				<li>
+					<a class="filter-title" href="">地域</a>
+					<div class="filter-list">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+				<li>
+					<a class="filter-title" href="">公司</a>
+					<div class="filter-list">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- right End -->
+</section>
+
+<!-- Main End -->
+</body>
+</html>

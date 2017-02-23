@@ -1,0 +1,307 @@
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #eeeff1;
+	font-family:'open_sansregular', 'Microsoft YaHei', 'SimSun';
+	font-size: 14px;
+}
+.active{
+	display: block !important;
+}
+.nav{
+	position: fixed;
+	height: 67px;
+	width: 100%;
+	background-color: #2d3349;
+	overflow: hidden;
+	z-index: 10;
+	.logo{
+		display: block;
+		float: left;
+		width: 156px;
+		height: 67px;
+		padding-left: 20px;
+		line-height: 67px;
+		background-image: url('../img/logo.jpg');
+	}
+	.top-nav{
+		float: left;
+		margin-left: 6px;
+		li{
+			float: left;
+			a{
+				position: relative;
+				display: inline-block;
+				height: 67px;
+				line-height: 67px;
+				padding:0 8px 0 36px;
+				margin: 0 10px;
+				color: #bfc8cf;
+				.icon{
+					position: absolute;
+					display: inline-block;
+					width: 26px;
+					height: 30px;
+					top: 18px;
+					left: 2px;
+					background: url('../img/sprite.png') no-repeat -2px -212px;
+				}
+				.xs{
+					background-position: -1px -250px;
+				}
+				.mg{
+					background-position: -1px -285px;
+				}
+				.hd{
+					background-position: -1px -321px;
+				}
+				.fg{
+					background-position: -2px -359px;
+				}
+				.bz{
+					background-position: -2px -395px;
+				}
+			}
+			a:hover{
+				color: #fff;
+				.hs{
+					background-position: -1px -1px;
+				}
+				.xs{
+					background-position: -1px -36px;
+				}
+				.mg{
+					background-position: -1px -70px;
+				}
+				.hd{
+					background-position: -1px -108px;
+				}
+				.fg{
+					background-position: -2px -144px;
+				}
+				.bz{
+					background-position: -1px -178px;
+				}
+			}
+		}
+	}
+	.user-info{
+		float: right;
+		height: 67px;
+		div{
+			float: left;
+			a{
+				position: relative;
+				height: 67px;
+				line-height: 67px;
+				padding-left: 30px;
+				margin-right: 15px;
+				color: #f5f5f5;
+				span{
+					position: absolute;
+					display: inline-block;
+					width: 24px;
+					height: 22px;
+					top: 1px;
+					left: 0;
+				}
+			}
+			.collection-icon{
+				background: url('../img/sprite.png') no-repeat -37px -175px;
+			}
+			.history-icon{
+				background: url('../img/sprite.png') no-repeat -36px -224px;
+			}
+			.logout-icon{
+				display: inline-block;
+				width: 36px;
+				height: 36px;
+				margin-top: 16px;
+				background: url('../img/logout.png') no-repeat;
+			}
+		}	
+		.user-mes{
+			a{
+				padding-left: 4px;
+			}
+		}
+		.logout{
+			a{
+				padding-left: 10px;
+				margin-right: 16px;
+			}
+			
+		}
+	}
+}
+//右边筛选框
+.right-filter{
+	position: fixed;
+	top: 67px;
+	right: 0;
+	width: 304px;
+	height: 100%;
+	border: 1px solid #dbe0e4;
+	background-color: #fff;
+	overflow-y: auto;
+	.filter-wrap{
+		margin: 10px;
+		min-height: 500px;
+		color: black;
+		ul{
+			li{
+				margin-bottom: 10px;
+				.filter-title{
+					display: block;
+					height: 38px;
+					margin-bottom: 5px;
+					line-height: 38px;
+					padding-left: 54px;
+					border: 1px solid #dbe0e4;
+					border-radius: 5px;
+				}
+				.filter-list{
+					display: none;
+					padding: 12px 10px;
+					border: 1px solid #dbe0e4;
+					border-radius: 5px;
+					background-color: #f5f5f5;
+					.filter{
+						display: block;
+						height: 32px;
+						line-height: 32px;
+					}
+				}
+			}
+		}
+	}
+}
+.filter-title{
+	position: relative;
+	span{
+		display: inline-block;
+		position: absolute;
+		width: 21px;
+		height: 20px;
+		top: 8px;
+		left: 20px;
+		background: url('../img/sprite.png') no-repeat -36px -52px;
+	}
+	.notice-icon{
+		background-position: -36px -75px;
+	}
+	.industry-icon{
+		background-position: -36px -97px;
+	}
+	.local-icon{
+		background-position: -36px -123px;
+	}
+	.company-icon{
+		background-position: -36px -148px;
+	}
+}
+.mainWrap{
+	height: 100%;
+	padding-top: 67px;
+	.left-main{
+		margin-right: 306px;
+		padding: 10px;
+		.main-top{
+			margin:0 auto 10px;
+			background-color: #fff;
+			border: 1px solid #dbe0e4;
+			border-radius: 5px;
+			z-index: 1;
+			padding: 18px 0 10px;
+			// 搜索框区域
+			.search-wrap{
+				position: relative;
+				width: 1000px;
+				height: 40px;
+				padding-left: 22px;
+				margin:0 auto 8px;
+				div{
+					float: left;
+				}
+				.date-select{
+					position: relative;
+					.date-text{
+						position: relative;
+						display: inline-block;
+						width: 70px;
+						height: 40px;
+						line-height: 20px;
+						padding-top: 8px;
+						padding-top: 7px\9;
+						padding-right: 10px;
+						margin-right: 10px;
+						text-align: center;
+						border: 1px solid #dbe0e4;
+						border-radius: 5px;
+						.date-icon{
+							position: absolute;
+							width: 20px;
+							height: 8px;
+							right: 0;
+							top: 18px;
+							background: url('../img/sprite.png') no-repeat -36px 0;
+						}
+					}
+					.lst_periods{
+						display: none;
+						position: absolute;
+						width: 254px;
+						margin-top: 10px;
+						padding:10px 0 20px 0;
+						border: 1px solid #dbe0e4;
+						border-radius: 5px;
+						background: #fff;
+						z-index: 999;
+						.date{
+							height: 40px;
+							line-height: 40px;
+						}
+						li{
+							padding: 0 10px;
+						}
+						li:hover{
+							background-color: #eee;
+						}
+						.btn{
+							display: inline-block;
+							width: 40px;
+							height: 40px;
+							margin-left: 10px;
+							line-height: 30px;
+							text-align: center;
+							border-radius: 5px;
+							border: 1px solid #dbe0e4;
+							vertical-align: top;
+							cursor: pointer;
+						}
+					}
+					.date-input{
+						display: inline-block;
+						width: 76px;
+						height: 40px;
+						//margin-top: -5px\9;
+						padding-top: 8px\9;
+						padding-left: 6px;
+						padding-right: 0;
+						border: 1px solid #dbe0e4;
+						border-radius: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+	
+
+
