@@ -10,6 +10,9 @@ body {
   font-family: 'open_sansregular', 'Microsoft YaHei', 'SimSun';
   font-size: 14px;
 }
+* {
+  box-sizing: border-box;
+}
 .mb10 {
   margin-bottom: 10px;
 }
@@ -235,8 +238,8 @@ body {
   width: 70px;
   height: 40px;
   line-height: 20px;
-  padding-top: 8px;
-  padding-top: 7px\9;
+  padding-top: 9px;
+  padding-top: 6px\9;
   padding-right: 10px;
   margin-right: 10px;
   text-align: center;
