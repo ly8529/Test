@@ -203,15 +203,7 @@ body {
 .filter-title .company-icon {
   background-position: -36px -148px;
 }
-.mainWrap {
-  height: 100%;
-  padding-top: 67px;
-}
-.mainWrap .left-main {
-  margin-right: 306px;
-  padding: 10px;
-}
-.mainWrap .left-main .main-top {
+.main-top {
   margin: 0 auto 10px;
   background-color: #fff;
   border: 1px solid #dbe0e4;
@@ -219,45 +211,35 @@ body {
   z-index: 1;
   padding: 18px 0 10px;
 }
-.mainWrap .left-main .main-top .search-wrap {
+.main-top .search-wrap {
   position: relative;
-  width: 1000px;
-  height: 40px;
-  padding-left: 22px;
-  margin: 0 auto 8px;
+  width: 954px;
+  margin: auto;
 }
-.mainWrap .left-main .main-top .search-wrap div {
-  float: left;
-}
-.mainWrap .left-main .main-top .search-wrap .date-select {
-  position: relative;
-}
-.mainWrap .left-main .main-top .search-wrap .date-select .date-text {
-  position: relative;
+.main-top .search-wrap .left-search {
   display: inline-block;
-  width: 70px;
+  width: 260px;
+  vertical-align: top;
+}
+.main-top .search-wrap .left-search .code-search {
+  display: none;
+  margin: 0 0 10px 10px;
+}
+.main-top .search-wrap .left-search .code-search .code {
+  width: 242px;
   height: 40px;
-  line-height: 20px;
-  padding-top: 9px;
-  padding-top: 6px\9;
-  padding-right: 10px;
-  margin-right: 10px;
-  text-align: center;
-  border: 1px solid #dbe0e4;
+  padding: 10px 0 10px 10px;
   border-radius: 5px;
+  border: 1px solid #dbe0e4;
 }
-.mainWrap .left-main .main-top .search-wrap .date-select .date-text .date-icon {
-  position: absolute;
-  width: 20px;
-  height: 8px;
-  right: 0;
-  top: 18px;
-  background: url('../img/sprite.png') no-repeat -36px 0;
+.main-top .search-wrap .left-search .date-select {
+  position: relative;
+  margin-left: 10px;
 }
-.mainWrap .left-main .main-top .search-wrap .date-select .lst_periods {
+.main-top .search-wrap .left-search .date-select .lst_periods {
   display: none;
   position: absolute;
-  width: 254px;
+  width: 238px;
   margin-top: 10px;
   padding: 10px 0 20px 0;
   border: 1px solid #dbe0e4;
@@ -265,17 +247,17 @@ body {
   background: #fff;
   z-index: 999;
 }
-.mainWrap .left-main .main-top .search-wrap .date-select .lst_periods .date {
+.main-top .search-wrap .left-search .date-select .lst_periods .date {
   height: 40px;
   line-height: 40px;
 }
-.mainWrap .left-main .main-top .search-wrap .date-select .lst_periods li {
+.main-top .search-wrap .left-search .date-select .lst_periods li {
   padding: 0 10px;
 }
-.mainWrap .left-main .main-top .search-wrap .date-select .lst_periods li:hover {
+.main-top .search-wrap .left-search .date-select .lst_periods li:hover {
   background-color: #eee;
 }
-.mainWrap .left-main .main-top .search-wrap .date-select .lst_periods .btn {
+.main-top .search-wrap .left-search .date-select .lst_periods .btn {
   display: inline-block;
   width: 40px;
   height: 40px;
@@ -287,33 +269,46 @@ body {
   vertical-align: top;
   cursor: pointer;
 }
-.mainWrap .left-main .main-top .search-wrap .date-select .date-input {
+.main-top .search-wrap .left-search .date-select .date-text {
+  position: relative;
   display: inline-block;
-  width: 76px;
+  width: 40px;
   height: 40px;
-  padding-top: 8px\9;
-  padding-left: 6px;
-  padding-right: 0;
+  line-height: 20px;
+  padding-right: 10px;
+  margin-right: 7px;
+  text-align: center;
+  border: 1px solid #dbe0e4;
+  border-radius: 5px;
+  background: #fff;
+}
+.main-top .search-wrap .left-search .date-select .date-text .date-icon {
+  position: absolute;
+  width: 20px;
+  height: 8px;
+  right: 0;
+  top: 18px;
+  background: url('../img/sprite.png') no-repeat -36px 0;
+}
+.main-top .search-wrap .left-search .date-select .date-input {
+  display: inline-block;
+  width: 92px;
+  height: 40px;
+  padding: 4px 12px;
   border: 1px solid #dbe0e4;
   border-radius: 5px;
   box-shadow: none;
+  vertical-align: top;
 }
-.mainWrap .left-main .main-top .search-wrap .code-search {
-  margin-left: 10px;
+.main-top .search-wrap .middle-search {
+  display: inline-block;
+  width: 500px;
 }
-.mainWrap .left-main .main-top .search-wrap .code-search .code {
-  width: 106px;
+.main-top .search-wrap .middle-search .input-search {
   height: 40px;
-  padding: 10px 0 10px 10px;
-  border-radius: 5px;
-  border: 1px solid #dbe0e4;
 }
-.mainWrap .left-main .main-top .search-wrap .input-search {
-  height: 40px;
-  margin-left: 10px;
-}
-.mainWrap .left-main .main-top .search-wrap .input-search .text-btn {
-  width: 320px;
+.main-top .search-wrap .middle-search .input-search .text-btn {
+  width: 410px;
   height: 40px;
   padding: 4px 10px;
   border: 1px solid #dbe0e4;
@@ -322,86 +317,132 @@ body {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
-.mainWrap .left-main .main-top .search-wrap .input-search .search-btn {
+.main-top .search-wrap .middle-search .input-search .search-btn {
   position: relative;
-  width: 76px;
+  width: 84px;
   height: 40px;
   border: 1px solid #dbe0e4;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
   background-color: #f5f5f5;
 }
-.mainWrap .left-main .main-top .search-wrap .input-search .search-btn .search-bnt-icon {
+.main-top .search-wrap .middle-search .input-search .search-btn .search-bnt-icon {
   position: absolute;
   width: 20px;
   height: 20px;
   top: 10px;
-  right: 24px;
+  right: 28px;
   background: url('../img/sprite.png') no-repeat -36px -200px;
 }
-.mainWrap .left-main .main-top .search-wrap .senior-search {
-  margin-left: 10px;
+.main-top .search-wrap .middle-search .input-search.hideSelf {
+  display: none !important;
 }
-.mainWrap .left-main .main-top .search-wrap .senior-search a {
-  position: relative;
-  display: inline-block;
-  width: 120px;
-  height: 40px;
-  padding-left: 36px;
-  line-height: 38px;
-  border: 1px solid #dbe0e4;
-  border-radius: 5px;
-}
-.mainWrap .left-main .main-top .search-wrap .senior-search a .search-icon {
-  position: absolute;
-  font-size: 20px;
-  font-weight: bold;
-  width: 20px;
-  height: 20px;
-  left: 14px;
-  top: 0;
-}
-.mainWrap .left-main .main-top .div_multi {
+.main-top .search-wrap .middle-search .div_multi_item {
   display: none;
-  width: 544px;
-  margin: auto;
-}
-.mainWrap .left-main .main-top .div_multi .div_multi_item {
   overflow: hidden;
 }
-.mainWrap .left-main .main-top .div_multi .div_multi_item div {
+.main-top .search-wrap .middle-search .div_multi_item div {
   float: left;
-  margin-right: 10px;
+  margin-right: 2px;
 }
-.mainWrap .left-main .main-top .div_multi .div_multi_item div span {
+.main-top .search-wrap .middle-search .div_multi_item div span {
   display: inline-block;
   float: left;
-  width: 38px;
+  width: 40px;
   height: 40px;
-  line-height: 38px;
+  line-height: 40px;
   text-align: center;
   border: 1px solid #dbe0e4;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
 }
-.mainWrap .left-main .main-top .div_multi .div_multi_item div .keyword {
+.main-top .search-wrap .middle-search .div_multi_item div .keyword {
   float: left;
-  width: 100px;
+  width: 150px;
   height: 40px;
   padding-left: 10px;
   border: 1px solid #dbe0e4;
 }
-.mainWrap .left-main .main-top .div_multi .div_multi_item .item1 .keyword {
+.main-top .search-wrap .middle-search .div_multi_item .item1 .keyword {
   border-left: none;
 }
-.mainWrap .left-main .main-top .div_multi .div_multi_item .item3 .keyword {
-  width: 226px;
-}
-.mainWrap .left-main .main-top .div_multi .div_multi_item:last-child {
+.main-top .search-wrap .middle-search .div_multi_item:last-child {
   overflow: hidden;
   margin-top: 10px;
 }
-.mainWrap .left-main .main-top .label-wrap {
+.main-top .search-wrap .right-search {
+  display: inline-block;
+  width: 180px;
+  vertical-align: top;
+}
+.main-top .search-wrap .right-search .senior-search {
+  display: inline-block;
+}
+.main-top .search-wrap .right-search .senior-search a {
+  position: relative;
+  display: inline-block;
+  width: 76px;
+  height: 40px;
+  padding-left: 30px;
+  line-height: 40px;
+  border: 1px solid #dbe0e4;
+  border-radius: 5px;
+}
+.main-top .search-wrap .right-search .senior-search a .search-icon {
+  position: absolute;
+  font-size: 20px;
+  font-weight: bold;
+  width: 20px;
+  height: 11px;
+  left: 14px;
+  top: 14px;
+  background: url('../img/sprite1.png') no-repeat -43px -21px;
+}
+.main-top .search-wrap .right-search .senior-search a .search-icon.toggle-icon {
+  background-position: -42px -6px;
+}
+.main-top .search-wrap .right-search .reset {
+  display: inline-block;
+  margin-left: 6px;
+}
+.main-top .search-wrap .right-search .reset a {
+  display: inline-block;
+  width: 76px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #e4e8eb;
+  border-radius: 5px;
+}
+.main-top .search-wrap .right-search .senior-btn-wrap {
+  display: none;
+  margin-top: 10px;
+}
+.main-top .search-wrap .right-search .senior-btn-wrap .senior-btn {
+  position: relative;
+  width: 162px;
+  height: 40px;
+  border: 1px solid #e4e8eb;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+.main-top .search-wrap .right-search .senior-btn-wrap .senior-btn .search-btn-icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 9px;
+  right: 68px;
+  background: url('../img/sprite.png') no-repeat -36px -200px;
+}
+.mainWrap {
+  height: 100%;
+  padding-top: 67px;
+}
+.mainWrap .left-main {
+  margin-right: 306px;
+  padding: 10px;
+}
+.mainWrap .left-main .label-wrap {
   display: none;
   position: relative;
   min-height: 70px;
@@ -412,13 +453,13 @@ body {
   border-radius: 5px;
   background-color: #f7f7f7;
 }
-.mainWrap .left-main .main-top .label-wrap .filter-label {
+.mainWrap .left-main .label-wrap .filter-label {
   position: relative;
   padding: 3px 50px 5px 22px;
   color: #fff;
   border-radius: 3px;
 }
-.mainWrap .left-main .main-top .label-wrap .filter-label .filter-close {
+.mainWrap .left-main .label-wrap .filter-label .filter-close {
   position: absolute;
   display: inline-block;
   width: 30px;
@@ -428,42 +469,42 @@ body {
   text-align: center;
   line-height: 28px;
 }
-.mainWrap .left-main .main-top .label-wrap .market {
+.mainWrap .left-main .label-wrap .market {
   background-color: #293043;
   border: 1px solid #232939;
 }
-.mainWrap .left-main .main-top .label-wrap .market .filter-close {
+.mainWrap .left-main .label-wrap .market .filter-close {
   background-color: #232939;
 }
-.mainWrap .left-main .main-top .label-wrap .notice {
+.mainWrap .left-main .label-wrap .notice {
   background-color: #4fb5dd;
   border: 1px solid #43b0db;
 }
-.mainWrap .left-main .main-top .label-wrap .notice .filter-close {
+.mainWrap .left-main .label-wrap .notice .filter-close {
   background-color: #43b0db;
 }
-.mainWrap .left-main .main-top .label-wrap .industry {
+.mainWrap .left-main .label-wrap .industry {
   background-color: #77ab3d;
   border: 1px solid #6fa037;
 }
-.mainWrap .left-main .main-top .label-wrap .industry .filter-close {
+.mainWrap .left-main .label-wrap .industry .filter-close {
   background-color: #6fa037;
 }
-.mainWrap .left-main .main-top .label-wrap .local {
+.mainWrap .left-main .label-wrap .local {
   background-color: #e89600;
   border: 1px solid #e79501;
 }
-.mainWrap .left-main .main-top .label-wrap .local .filter-close {
+.mainWrap .left-main .label-wrap .local .filter-close {
   background-color: #e79501;
 }
-.mainWrap .left-main .main-top .label-wrap .company {
+.mainWrap .left-main .label-wrap .company {
   background-color: #f14e51;
   border: 1px solid #f04042;
 }
-.mainWrap .left-main .main-top .label-wrap .company .filter-close {
+.mainWrap .left-main .label-wrap .company .filter-close {
   background-color: #f04042;
 }
-.mainWrap .left-main .main-top .btn {
+.mainWrap .left-main .btn {
   display: none;
   width: 126px;
   height: 32px;

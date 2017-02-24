@@ -140,8 +140,7 @@ body{
 			a{
 				padding-left: 10px;
 				margin-right: 16px;
-			}
-			
+			}	
 		}
 	}
 }
@@ -211,282 +210,320 @@ body{
 		background-position: -36px -148px;
 	}
 }
+//搜索区域
+.main-top{
+	margin:0 auto 10px;
+	background-color: #fff;
+	border: 1px solid #dbe0e4;
+	border-radius: 5px;
+	z-index: 1;
+	padding: 18px 0 10px;
+	.search-wrap{
+		position: relative;
+		width: 954px;
+		margin: auto;
+		.left-search{
+			display: inline-block;
+			width: 260px;
+			vertical-align: top;
+			.code-search{
+				display: none;
+				margin: 0 0 10px 10px;
+				.code{
+					width: 242px;
+					height: 40px;
+					padding: 10px 0 10px 10px;
+					border-radius: 5px;
+					border: 1px solid #dbe0e4;
+				}
+			}
+			.date-select{
+				position: relative;
+				margin-left: 10px;
+				.lst_periods{
+					display: none;
+					position: absolute;
+					width: 238px;
+					margin-top: 10px;
+					padding:10px 0 20px 0;
+					border: 1px solid #dbe0e4;
+					border-radius: 5px;
+					background: #fff;
+					z-index: 999;
+					.date{
+						height: 40px;
+						line-height: 40px;
+					}
+					li{
+						padding: 0 10px;
+					}
+					li:hover{
+						background-color: #eee;
+					}
+					.btn{
+						display: inline-block;
+						width: 40px;
+						height: 40px;
+						margin-left: 10px;
+						line-height: 30px;
+						text-align: center;
+						border-radius: 5px;
+						border: 1px solid #dbe0e4;
+						vertical-align: top;
+						cursor: pointer;
+					}
+				}
+				.date-text{
+					position: relative;
+					display: inline-block;
+					width: 40px;
+					height: 40px;
+					line-height: 20px;
+					padding-right: 10px;
+					margin-right: 7px;
+					text-align: center;
+					border: 1px solid #dbe0e4;
+					border-radius: 5px;
+					background: #fff;
+					.date-icon{
+						position: absolute;
+						width: 20px;
+						height: 8px;
+						right: 0;
+						top: 18px;
+						background: url('../img/sprite.png') no-repeat -36px 0;
+					}
+				}
+				.date-input{
+					display: inline-block;
+					width: 92px;
+					height: 40px;
+					padding: 4px 12px;
+					border: 1px solid #dbe0e4;
+					border-radius: 5px;
+					box-shadow: none;
+					vertical-align: top;
+				}
+			}
+		}
+		.middle-search{
+			display: inline-block;
+			width: 500px;
+			.input-search{
+				height: 40px;
+				.text-btn{
+					width: 410px;
+					height: 40px;
+					padding: 4px 10px;
+					border: 1px solid #dbe0e4;
+					border-right: none;
+					vertical-align: top;
+					border-bottom-left-radius: 5px;
+					border-top-left-radius: 5px;
+				}
+				.search-btn{
+					position: relative;
+					width: 84px;
+					height: 40px;
+					border: 1px solid #dbe0e4;
+					border-bottom-right-radius: 5px;
+					border-top-right-radius: 5px;
+					background-color: #f5f5f5;
+					.search-bnt-icon{
+						position: absolute;
+						width: 20px;
+						height: 20px;
+						top: 10px;
+						right: 28px;
+						background: url('../img/sprite.png') no-repeat -36px -200px;
+					}	
+				}
+			}
+			.input-search.hideSelf{
+				display: none !important;
+			}
+			.div_multi_item{
+				display: none;
+				overflow: hidden;
+				div{
+					float: left;
+					margin-right: 2px;
+					span{
+						display: inline-block;
+						float: left;
+						width: 40px;
+						height: 40px;
+						line-height: 40px;
+						text-align: center;
+						border: 1px solid #dbe0e4;
+						border-bottom-left-radius: 3px;
+						border-top-left-radius: 3px;
+					}
+					.keyword{
+						float: left;
+						width: 150px;
+						height: 40px;
+						padding-left: 10px;
+						border: 1px solid #dbe0e4;
+					}	
+				}
+				.item1{
+					.keyword{
+						border-left: none;
+					}
+				}
+			}
+			.div_multi_item:last-child{
+				overflow: hidden;
+				margin-top: 10px;
+			} 
+		}
+		.right-search{
+			display: inline-block;
+			width: 180px;
+			vertical-align: top;
+			.senior-search{
+				display: inline-block;
+				a{
+					position: relative;
+					display: inline-block;
+					width: 76px;
+					height: 40px;
+					padding-left: 30px;
+					line-height: 40px;
+					border: 1px solid #dbe0e4;
+					border-radius: 5px;
+					.search-icon{
+						position: absolute;
+						font-size: 20px;
+						font-weight: bold;
+						width: 20px;
+						height: 11px;
+						left: 14px;
+						top: 14px;
+						background: url('../img/sprite1.png') no-repeat -43px -21px;
+					}
+					.search-icon.toggle-icon{
+						background-position: -42px -6px;
+					}
+				}
+			}
+			.reset{
+				display: inline-block;
+				margin-left: 6px;
+				a{
+					display: inline-block;
+					width: 76px;
+					height: 40px;
+					line-height: 40px;
+					text-align: center;
+					border: 1px solid #e4e8eb;
+					border-radius: 5px;
+				}
+			}
+			.senior-btn-wrap{
+				display: none;
+				margin-top: 10px;
+				.senior-btn{
+					position: relative;
+					width: 162px;
+					height: 40px;
+					border: 1px solid #e4e8eb;
+					border-radius: 5px;
+					background-color: #f7f7f7;
+					.search-btn-icon{
+						position: absolute;
+						width: 20px;
+						height: 20px;
+						top: 9px;
+						right: 68px;
+						background: url('../img/sprite.png') no-repeat -36px -200px;
+					}
+				}
+			}
+		}
+	}
+}
 .mainWrap{
 	height: 100%;
 	padding-top: 67px;
 	.left-main{
 		margin-right: 306px;
 		padding: 10px;
-		.main-top{
-			margin:0 auto 10px;
-			background-color: #fff;
+		// 筛选框区域
+		.label-wrap{
+			display: none;
+			position: relative;
+			min-height: 70px;
+			max-height: 150px;
+			margin: 0 10px;
+			padding: 15px;
+			border: 1px dashed #dbe0e4;
+			border-radius: 5px;
+			background-color: #f7f7f7;
+			//筛选按钮
+			.filter-label{
+				position: relative;
+				padding: 3px 50px 5px 22px;
+				color: #fff;
+				border-radius: 3px;
+				//筛选关闭按钮
+				.filter-close{
+					position: absolute;
+					display: inline-block;
+					width: 30px;
+					height: 28px;
+					top: 0;
+					right: 0;
+					text-align: center;
+					line-height: 28px;
+				}
+			}
+			.market{
+				background-color: #293043;
+				border: 1px solid #232939;
+				.filter-close{
+					background-color: #232939;
+				}
+			}
+			.notice{
+				background-color: #4fb5dd;
+				border: 1px solid #43b0db;
+				.filter-close{
+					background-color: #43b0db;
+				}
+			}
+			.industry{
+				background-color: #77ab3d;
+				border: 1px solid #6fa037;
+				.filter-close{
+					background-color: #6fa037;
+				}
+			}
+			.local{
+				background-color: #e89600;
+				border: 1px solid #e79501;
+				.filter-close{
+					background-color: #e79501;
+				}
+			}
+			.company{
+				background-color: #f14e51;
+				border: 1px solid #f04042;
+				.filter-close{
+					background-color: #f04042;
+				}
+			}
+		}
+		.btn{
+			display: none;
+			width: 126px;
+			height: 32px;
+			margin: 10px auto 0;
 			border: 1px solid #dbe0e4;
 			border-radius: 5px;
-			z-index: 1;
-			padding: 18px 0 10px;
-			// 搜索框区域
-			.search-wrap{
-				position: relative;
-				width: 1000px;
-				height: 40px;
-				padding-left: 22px;
-				margin:0 auto 8px;
-				div{
-					float: left;
-				}
-				.date-select{
-					position: relative;
-					.date-text{
-						position: relative;
-						display: inline-block;
-						width: 70px;
-						height: 40px;
-						line-height: 20px;
-						padding-top: 9px;
-						padding-top: 6px\9;
-						padding-right: 10px;
-						margin-right: 10px;
-						text-align: center;
-						border: 1px solid #dbe0e4;
-						border-radius: 5px;
-						.date-icon{
-							position: absolute;
-							width: 20px;
-							height: 8px;
-							right: 0;
-							top: 18px;
-							background: url('../img/sprite.png') no-repeat -36px 0;
-						}
-					}
-					.lst_periods{
-						display: none;
-						position: absolute;
-						width: 254px;
-						margin-top: 10px;
-						padding:10px 0 20px 0;
-						border: 1px solid #dbe0e4;
-						border-radius: 5px;
-						background: #fff;
-						z-index: 999;
-						.date{
-							height: 40px;
-							line-height: 40px;
-						}
-						li{
-							padding: 0 10px;
-						}
-						li:hover{
-							background-color: #eee;
-						}
-						.btn{
-							display: inline-block;
-							width: 40px;
-							height: 40px;
-							margin-left: 10px;
-							line-height: 30px;
-							text-align: center;
-							border-radius: 5px;
-							border: 1px solid #dbe0e4;
-							vertical-align: top;
-							cursor: pointer;
-						}
-					}
-					.date-input{
-						display: inline-block;
-						width: 76px;
-						height: 40px;
-						padding-top: 8px\9;
-						padding-left: 6px;
-						padding-right: 0;
-						border: 1px solid #dbe0e4;
-						border-radius: 5px;
-						box-shadow: none;
-					}
-				}
-				.code-search{
-					margin-left: 10px;
-					.code{
-						width: 106px;
-						height: 40px;
-						padding: 10px 0 10px 10px;
-						border-radius: 5px;
-						border: 1px solid #dbe0e4;
-					}
-				}
-				.input-search{
-					height: 40px;
-					margin-left: 10px;
-					.text-btn{
-						width: 320px;
-						height: 40px;
-						padding: 4px 10px;
-						border: 1px solid #dbe0e4;
-						border-right: none;
-						vertical-align: top;
-						border-bottom-left-radius: 5px;
-						border-top-left-radius: 5px;
-					}
-					.search-btn{
-						position: relative;
-						width: 76px;
-						height: 40px;
-						border: 1px solid #dbe0e4;
-						border-bottom-right-radius: 5px;
-						border-top-right-radius: 5px;
-						background-color: #f5f5f5;
-						.search-bnt-icon{
-							position: absolute;
-							width: 20px;
-							height: 20px;
-							top: 10px;
-							right: 24px;
-							background: url('../img/sprite.png') no-repeat -36px -200px;
-						}	
-					}
-				} 
-				.senior-search{
-					margin-left: 10px;
-					a{
-						position: relative;
-						display: inline-block;
-						width: 120px;
-						height: 40px;
-						padding-left: 36px;
-						line-height: 38px;
-						border: 1px solid #dbe0e4;
-						border-radius: 5px;
-						.search-icon{
-							position: absolute;
-							font-size: 20px;
-							font-weight: bold;
-							width: 20px;
-							height: 20px;
-							left: 14px;
-							top: 0;
-						}
-					}
-				}
-			}
-			//高级搜索
-			.div_multi{
-				display: none;
-				width: 544px;
-				margin: auto;
-				.div_multi_item{
-					overflow: hidden;
-					div{
-						float: left;
-						margin-right: 10px;
-						span{
-							display: inline-block;
-							float: left;
-							width: 38px;
-							height: 40px;
-							line-height: 38px;
-							text-align: center;
-							border: 1px solid #dbe0e4;
-							border-bottom-left-radius: 3px;
-							border-top-left-radius: 3px;
-						}
-						.keyword{
-							float: left;
-							width: 100px;
-							height: 40px;
-							padding-left: 10px;
-							border: 1px solid #dbe0e4;
-						}	
-					}
-					.item1{
-						.keyword{
-							border-left: none;
-						}
-					}
-					.item3{
-						.keyword{
-							width: 226px;
-						}
-					}
-				}
-				.div_multi_item:last-child{
-					overflow: hidden;
-					margin-top: 10px;
-				}
-			}
-			// 筛选框区域
-			.label-wrap{
-				display: none;
-				position: relative;
-				min-height: 70px;
-				max-height: 150px;
-				margin: 0 10px;
-				padding: 15px;
-				border: 1px dashed #dbe0e4;
-				border-radius: 5px;
-				background-color: #f7f7f7;
-				//筛选按钮
-				.filter-label{
-					position: relative;
-					padding: 3px 50px 5px 22px;
-					color: #fff;
-					border-radius: 3px;
-					//筛选关闭按钮
-					.filter-close{
-						position: absolute;
-						display: inline-block;
-						width: 30px;
-						height: 28px;
-						top: 0;
-						right: 0;
-						text-align: center;
-						line-height: 28px;
-					}
-				}
-				.market{
-					background-color: #293043;
-					border: 1px solid #232939;
-					.filter-close{
-						background-color: #232939;
-					}
-				}
-				.notice{
-					background-color: #4fb5dd;
-					border: 1px solid #43b0db;
-					.filter-close{
-						background-color: #43b0db;
-					}
-				}
-				.industry{
-					background-color: #77ab3d;
-					border: 1px solid #6fa037;
-					.filter-close{
-						background-color: #6fa037;
-					}
-				}
-				.local{
-					background-color: #e89600;
-					border: 1px solid #e79501;
-					.filter-close{
-						background-color: #e79501;
-					}
-				}
-				.company{
-					background-color: #f14e51;
-					border: 1px solid #f04042;
-					.filter-close{
-						background-color: #f04042;
-					}
-				}
-			}
-			.btn{
-				display: none;
-				width: 126px;
-				height: 32px;
-				margin: 10px auto 0;
-				border: 1px solid #dbe0e4;
-				border-radius: 5px;
-				background-color: #fff;
-				cursor: pointer;
-			}
+			background-color: #fff;
+			cursor: pointer;
 		}	
 	}
 }
