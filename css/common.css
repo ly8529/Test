@@ -13,11 +13,19 @@ body {
 * {
   box-sizing: border-box;
 }
+em {
+  font-weight: bold;
+  color: red;
+  text-decoration: underline;
+}
 .mb10 {
   margin-bottom: 10px;
 }
 .active {
   display: block !important;
+}
+.hideSelf {
+  display: none;
 }
 .nav {
   position: fixed;
@@ -100,6 +108,7 @@ body {
 .nav .user-info {
   float: right;
   height: 67px;
+  font-size: 12px;
 }
 .nav .user-info div {
   float: left;
@@ -111,6 +120,7 @@ body {
   padding-left: 30px;
   margin-right: 15px;
   color: #f5f5f5;
+  font-size: 12px;
 }
 .nav .user-info div a span {
   position: absolute;
@@ -165,13 +175,13 @@ body {
   line-height: 38px;
   padding-left: 54px;
   border: 1px solid #dbe0e4;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .right-filter .filter-wrap ul li .filter-list {
   display: none;
   padding: 12px 10px;
   border: 1px solid #dbe0e4;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: #f5f5f5;
 }
 .right-filter .filter-wrap ul li .filter-list .filter {
@@ -207,7 +217,7 @@ body {
   margin: 0 auto 10px;
   background-color: #fff;
   border: 1px solid #dbe0e4;
-  border-radius: 5px;
+  border-radius: 3px;
   z-index: 1;
   padding: 18px 0 10px;
 }
@@ -229,7 +239,7 @@ body {
   width: 242px;
   height: 40px;
   padding: 10px 0 10px 10px;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid #dbe0e4;
 }
 .main-top .search-wrap .left-search .date-select {
@@ -243,7 +253,7 @@ body {
   margin-top: 10px;
   padding: 10px 0 20px 0;
   border: 1px solid #dbe0e4;
-  border-radius: 5px;
+  border-radius: 3px;
   background: #fff;
   z-index: 999;
 }
@@ -264,7 +274,7 @@ body {
   margin-left: 10px;
   line-height: 30px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid #dbe0e4;
   vertical-align: top;
   cursor: pointer;
@@ -296,7 +306,7 @@ body {
   height: 40px;
   padding: 4px 12px;
   border: 1px solid #dbe0e4;
-  border-radius: 5px;
+  border-radius: 3px;
   box-shadow: none;
   vertical-align: top;
 }
@@ -314,16 +324,16 @@ body {
   border: 1px solid #dbe0e4;
   border-right: none;
   vertical-align: top;
-  border-bottom-left-radius: 5px;
-  border-top-left-radius: 5px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
 }
 .main-top .search-wrap .middle-search .input-search .search-btn {
   position: relative;
   width: 84px;
   height: 40px;
   border: 1px solid #dbe0e4;
-  border-bottom-right-radius: 5px;
-  border-top-right-radius: 5px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
   background-color: #f5f5f5;
 }
 .main-top .search-wrap .middle-search .input-search .search-btn .search-bnt-icon {
@@ -337,15 +347,15 @@ body {
 .main-top .search-wrap .middle-search .input-search.hideSelf {
   display: none !important;
 }
-.main-top .search-wrap .middle-search .div_multi_item {
+.main-top .search-wrap .middle-search .div-multi-item {
   display: none;
   overflow: hidden;
 }
-.main-top .search-wrap .middle-search .div_multi_item div {
+.main-top .search-wrap .middle-search .div-multi-item div {
   float: left;
   margin-right: 2px;
 }
-.main-top .search-wrap .middle-search .div_multi_item div span {
+.main-top .search-wrap .middle-search .div-multi-item div span {
   display: inline-block;
   float: left;
   width: 40px;
@@ -356,17 +366,17 @@ body {
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
 }
-.main-top .search-wrap .middle-search .div_multi_item div .keyword {
+.main-top .search-wrap .middle-search .div-multi-item div .keyword {
   float: left;
   width: 150px;
   height: 40px;
   padding-left: 10px;
   border: 1px solid #dbe0e4;
 }
-.main-top .search-wrap .middle-search .div_multi_item .item1 .keyword {
+.main-top .search-wrap .middle-search .div-multi-item .item1 .keyword {
   border-left: none;
 }
-.main-top .search-wrap .middle-search .div_multi_item:last-child {
+.main-top .search-wrap .middle-search .div-multi-item:last-child {
   overflow: hidden;
   margin-top: 10px;
 }
@@ -386,7 +396,7 @@ body {
   padding-left: 30px;
   line-height: 40px;
   border: 1px solid #dbe0e4;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .main-top .search-wrap .right-search .senior-search a .search-icon {
   position: absolute;
@@ -412,7 +422,7 @@ body {
   line-height: 40px;
   text-align: center;
   border: 1px solid #e4e8eb;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .main-top .search-wrap .right-search .senior-btn-wrap {
   display: none;
@@ -423,7 +433,7 @@ body {
   width: 162px;
   height: 40px;
   border: 1px solid #e4e8eb;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: #f7f7f7;
 }
 .main-top .search-wrap .right-search .senior-btn-wrap .senior-btn .search-btn-icon {
@@ -450,7 +460,7 @@ body {
   margin: 0 10px;
   padding: 15px;
   border: 1px dashed #dbe0e4;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: #f7f7f7;
 }
 .mainWrap .left-main .label-wrap .filter-label {
@@ -510,7 +520,140 @@ body {
   height: 32px;
   margin: 10px auto 0;
   border: 1px solid #dbe0e4;
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: #fff;
   cursor: pointer;
+}
+.result .result-top {
+  background-color: #fff;
+  height: 52px;
+  border: 1px solid #dbe0e4;
+  border-radius: 5px;
+}
+.result .result-top .result-info {
+  display: inline-block;
+  position: relative;
+  padding-left: 56px;
+  height: 52px;
+  line-height: 52px;
+}
+.result .result-top .result-info .result-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-left: 22px;
+  background: url('../img/sprite.png') no-repeat -38px -286px;
+  left: 0px;
+  top: 14px;
+  position: absolute;
+}
+.result .result-top .result-info .result-num {
+  margin: 0 4px;
+  color: red;
+}
+.result .result-top .result-filter {
+  display: inline-block;
+  float: right;
+  margin-top: 5px;
+}
+.result .result-top .result-filter .recently {
+  float: left;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #dbe0e4;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  background: #f5f5f5;
+}
+.result .result-top .result-filter .relative {
+  float: left;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #dbe0e4;
+  border-left: none;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.result .result-top .result-filter .expand-all {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  margin: 0 10px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #dbe0e4;
+}
+.result .result-show {
+  padding: 20px;
+  border: 1px solid #dbe0e4;
+  border-radius: 3px;
+  background-color: #fff;
+}
+.result .result-show .result-area {
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #dbe0e4;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.result .result-show .result-area .result-item {
+  position: relative;
+  height: 50px;
+  line-height: 30px;
+  padding: 9px 10px;
+}
+.result .result-show .result-area .result-item .stock {
+  display: inline-block;
+  width: 66px;
+  height: 32px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #dbe0e4;
+  border-radius: 3px;
+  background-color: #edefef;
+}
+.result .result-show .result-area .result-item .title {
+  padding-left: 6px;
+}
+.result .result-show .result-area .result-item .title:hover {
+  text-decoration: underline;
+}
+.result .result-show .result-area .result-item span {
+  color: #999;
+  float: right;
+  margin-right: 40px;
+}
+.result .result-show .result-area .result-item .source {
+  position: absolute;
+  display: inline-block;
+  width: 22px;
+  height: 28px;
+  top: 12px;
+  right: 10px;
+  background: url('../img/sprite1.png') no-repeat 0 -113px;
+}
+.result .result-show .result-area .paras-wrap {
+  padding: 0 20px 8px;
+  background: #f5f5f5;
+  line-height: 20px;
+  font-size: 12px;
+  border-top: 1px solid #dbe0e4;
+}
+.result .result-show .result-area .paras-wrap .para {
+  padding: 7px 0;
+  text-align: justify;
+  border-bottom: 1px solid #dbe0e4;
+}
+.result .result-show .result-area:hover,
+.result .result-show .result-area.bg {
+  background-color: #edefef;
+}
+.result .result-show .result-area:hover .stock,
+.result .result-show .result-area.bg .stock {
+  background: #fff;
 }

@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>搜披露-沪深股市披露检查</title>
+	<title>搜披露-公告详情页</title>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/detail.css">
@@ -38,164 +38,169 @@
 <!-- Nav End -->
 <!-- Main Start -->
 <section class="mainWrap">
-	<!-- left Start -->
-	<section class="left-main">
-		<div class="main-top">
-			<!-- Search Start -->
-			<div class="search-wrap">
-				<div class="date-select">
-					<a class="date-text" id="date-text">日期
-						<span class="date-icon"></span>
-					</a>
-					<ul id="lst_periods" class="lst_periods">
-	                    <li><a href="javascript:void(0)" class="date">最近一周</a></li>
-	                    <li><a href="javascript:void(0)" class="date">最近一月</a></li>
-	                    <li><a href="javascript:void(0)" class="date">最近三月</a></li>
-	                    <li><a href="javascript:void(0)" class="date">最近六月</a></li>
-	                    <li><a href="javascript:void(0)" class="date">最近一年</a></li>
-	                    <li><a href="javascript:void(0)" class="date">最近三年</a></li>
-	                    <li><a href="javascript:void(0)" class="date">2016年</a></li>
-	                    <li><a href="javascript:void(0)" class="date">2015年</a></li>
-	                    <li><a href="javascript:void(0)" class="date">2014年</a></li>
-	                    <li><a href="javascript:void(0)" class="date">2013年</a></li>
-	                    <li><a href="javascript:void(0)" class="date">全部时间</a></li>
-	                </ul>
-	                <input id="input_ds" name="ds" type="text" class="date-input form-control">
-	                    	<span class="">-</span>
-	                <input id="input_de" name="de" type="text" class="date-input form-control">
-				</div>
-				<div class="code-search">
-					<input name="c" id="input_stockcode" type="text" class="code" placeholder="公司代码/简称" autocomplete="off" data-provide="typeahead">
-				</div>
-				<div class="input-search">
-					<input class="text-btn" type="text" placeholder="hah "><button class="search-btn"><span class="search-bnt-icon"></span></button>
-				</div>
-				<div class="senior-search">
-					<a id="senior-search" href="javascript:void(0)">高级搜索<span class="search-icon">+</span></a>
-				</div>
-			</div>
-			<div id="div_multi" class="div_multi">
-                <div class="div_multi_item">
-                    <div class="item1">
-                        <span>标题</span>
-                        <input id="input_tm" name="tm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
-                    </div>
-                    <div class="item2">
-                        <input id="input_ts" name="ts" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
-                    </div>
-                    <div class="item3">
-                        <input id="input_tn" name="tn" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
-                    </div>
-                </div>
-                <div class="div_multi_item">
-                    <div class="item1">
-                        <span>正文</span>
-                        <input id="input_tm" name="tm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
-                    </div>
-                    <div class="item2">
-                        <input id="input_ts" name="ts" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
-                    </div>
-                    <div class="item3">
-                        <input id="input_tn" name="tn" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
-                    </div>
-                </div>
-            </div>
-			<!-- Search End -->
-			<div class="label-wrap" id="label-wrap">
-				<a class="filter-label market" href="javascript:void(0)">市场<span class="filter-close">x</span></a>
-				<a class="filter-label notice" href="javascript:void(0)">公告<span class="filter-close">x</span></a>
-				<a class="filter-label industry" href="javascript:void(0)">行业<span class="filter-close">x</span></a>
-				<a class="filter-label local" href="javascript:void(0)">地域<span class="filter-close">x</span></a>
-				<a class="filter-label company" href="javascript:void(0)">公司<span class="filter-close">x</span></a>
-			</div>
-			<input id="sure_btn" class="btn" type="submit" value="确定">
+	<div class="detail-title">
+		<a id="btn_company" class="stock" href="">888888</a>
+		<div class="div-wrap">
+			<div id="span_title" class="span-title" href="">国浩律师（上海）事务所关于公司发行股份购买资产并募集配套资金暨关联交易之非公开发行股票募集配套资金发行过程和认购对象合规性的见证法律意见书国浩律师（上海）事务所关于公司发行股份购买资产并募集配套资金暨关联交易之非公开发行股票募集配套资金发行过程和认购对象合规性的见证法律意见书</div>
+			<a class="source" href=""></a>
 		</div>
-		<!-- content Start -->
-		<div class="content">
-			<div class="result-top mb10">
-				<div class="result-title"><span class="result-icon"></span>找到<span class="result-num">4,446</span>个结果</div>
-				<div class="result-filter">
-					<a class="recently" href="javascript:void(0)">最近</a>
-					<a class="relative" href="javascript:void(0)">相关</a>
-					<a class="expand-all" href="javascript:void(0)">全部展开</a>
+		<div class="fr">
+			<span class="date">2017-2-27</span>
+			<a id="btn_fav" class="btn-fav" href=""><span class="fav-icon"></span>收藏</a>
+		</div>
+	</div>
+	<!-- content Wrap Start -->
+	<section class="content-wrap">
+		<!-- left Start -->
+		<section class="left-main">
+			<div class="main-top">
+				<div class="top-left">
+					<button class="btn-search"></button>
+					<input class="input-search" type="text" placeholder="请输入筛选的词">
+					<span class="match-num">4/2224</span>
+					<button class="match match-top">2</button>
+					<button class="match match-bottom">1</button>
+				</div>
+				<div class="top-right">
+					<button class="btn-small">小号</button>
+					<button class="btn-large">大号</button>
+					<button class="btn-ya">雅黑</button>
+					<button class="btn-song">宋体</button>
 				</div>
 			</div>
-			
-
-		</div>
-		<!-- content End -->
-	</section>
-	<!-- left End -->
-	<!-- right Start -->
-	<section class="right-filter">
-		<div class="filter-wrap">
+			<!-- content Start -->
+			<div id="content" class="content">
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p><p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p><p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+				<p>中信证券股份有限公司 关于江苏国泰国际集团国贸股份有限公司 发行股份及支付现金购买资产并募集配套资金暨关联交易之非公开发行股票发行过程和认购对象合规</p>
+			</div>
+			<!-- content End -->
+		</section>
+		<!-- left End -->
+		<!-- right Start -->
+		<section class="aside-right">
 			<ul>
 				<li>
-					<a class="filter-title" href="javascript:void(0)"><span class="market-icon"></span>市场类型</a>
-					<div class="filter-list active">
-						<a class="filter" href="">全部市场类型</a>
-						<a class="filter" href="">沪深主板</a>
-						<a class="filter" href="">深市主板</a>
-						<a class="filter" href="">深市中小板</a>
-						<a class="filter" href="">深市创业板</a>
-						<a class="filter" href="">深市全部</a>
-						<a class="filter" href="">深市主板和中小板</a>
+					<a class="a-nav navlist" href="javascript:void(0)">导航</a>
+					<div class="nav-content tablist active">
+						<div class="item">
+							<div class="one-leavel">
+								<span class="drop-down span-drop-down"></span>
+								<a class="title" href="">一级标题</a>
+							</div>
+							<div class="two-leavel">
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="one-leavel">
+								<span class="drop-down span-take-back"></span>
+								<a class="title" href="#">一级标题</a>
+							</div>
+							<div class="two-leavel">
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="one-leavel">
+								<span class="drop-down span-take-back"></span>
+								<a class="title" href="#">一级标题</a>
+							</div>
+							<div class="two-leavel">
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="one-leavel">
+								<span class="drop-down span-take-back"></span>
+								<a class="title" href="#">一级标题</a>
+							</div>
+							<div class="two-leavel">
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+							</div>
+						</div>
+						<div class="item">
+							<div class="one-leavel">
+								<span class="drop-down span-take-back"></span>
+								<a class="title" href="#">一级标题</a>
+							</div>
+							<div class="two-leavel">
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+								<a href="">二级标题</a>
+							</div>
+						</div>
 					</div>
 				</li>
 				<li>
-					<a class="filter-title" href="javascript:void(0)"><span class="notice-icon"></span>公告类型</a>
-					<div class="filter-list">
-						<a class="filter" href="">全部市场类型</a>
-						<a class="filter" href="">沪深主板</a>
-						<a class="filter" href="">深市主板</a>
-						<a class="filter" href="">深市中小板</a>
-						<a class="filter" href="">深市创业板</a>
-						<a class="filter" href="">深市全部</a>
-						<a class="filter" href="">深市主板和中小板</a>
-					</div>
+					<a class="info navlist" href="javascript:void(0)">援引文件</a>
+					<div class="info-content tablist">援引文件</div>
 				</li>
 				<li>
-					<a class="filter-title" href="javascript:void(0)"><span class="industry-icon"></span>行业</a>
-					<div class="filter-list">
-						<a class="filter" href="">全部市场类型</a>
-						<a class="filter" href="">沪深主板</a>
-						<a class="filter" href="">深市主板</a>
-						<a class="filter" href="">深市中小板</a>
-						<a class="filter" href="">深市创业板</a>
-						<a class="filter" href="">深市全部</a>
-						<a class="filter" href="">深市主板和中小板</a>
-					</div>
-				</li>
-				<li>
-					<a class="filter-title" href="javascript:void(0)"><span class="local-icon"></span>地域</a>
-					<div class="filter-list">
-						<a class="filter" href="">全部市场类型</a>
-						<a class="filter" href="">沪深主板</a>
-						<a class="filter" href="">深市主板</a>
-						<a class="filter" href="">深市中小板</a>
-						<a class="filter" href="">深市创业板</a>
-						<a class="filter" href="">深市全部</a>
-						<a class="filter" href="">深市主板和中小板</a>
-					</div>
-				</li>
-				<li>
-					<a class="filter-title" href="javascript:void(0)"><span class="company-icon"></span>公司</a>
-					<div class="filter-list">
-						<a class="filter" href="">全部市场类型</a>
-						<a class="filter" href="">沪深主板</a>
-						<a class="filter" href="">深市主板</a>
-						<a class="filter" href="">深市中小板</a>
-						<a class="filter" href="">深市创业板</a>
-						<a class="filter" href="">深市全部</a>
-						<a class="filter" href="">深市主板和中小板</a>
-					</div>
+					<a class="adjacent navlist" href="javascript:void(0)">相关公告</a>
+					<div class="adjacent-content tablist">相关公告</div>
 				</li>
 			</ul>
-		</div>
+		</section>
+		<!--  right End -->
 	</section>
-	<!-- right End -->
+	<!-- content Wrap End -->
 </section>
-
 <!-- Main End -->
+<script>
+$(document).ready(function(){
+	$('#span_title').mouseenter(function(){
+		$('#span_title').stop(true).animate({'height':'120px'},500);
+	})
+	$('#span_title').mouseleave(function(){
+		$('#span_title').stop(true).animate({'height':'40px'},500);
+	})
+	//调整主题内容的高度
+	var windowHeight = $(window).height();
+    $("#content").height(windowHeight - 210);
+	$(window).resize(function() {
+  		var windowHeight = $(window).height();
+    	$("#content").height(windowHeight - 210);
+	});
+	//right aside 切换
+	$('.navlist').on('click',function(e){
+		$(this).parent().find('.tablist').addClass('active');
+		$(this).parent().siblings().find('.tablist').removeClass('active');
+	})
+	//二级标题的切换
+	$('.drop-down').on('click',function(){
+		$(this).parent().parent().find('.two-leavel').slideToggle();
+	})
+})	
+</script>
 </body>
 </html>
