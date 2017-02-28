@@ -21,12 +21,12 @@
 <nav class="nav">
 	<a class="logo" href=""></a>
 	<ul class="top-nav">
-		<li class="active"><a href="SearchMain.html"><span class="icon hs"></span>沪深</a></li>
-		<li><a href="SearcOtc.html"><span class="icon xs"></span>新三板</a></li>
-		<li><a href="SearchUs.html"><span class="icon mg"></span>美股</a></li>
-		<li><a href="SearchInteraction.html"><span class="icon hd"></span>互动平台</a></li>
-		<li><a href="SearchLaw.html"><span class="icon fg"></span>法规</a></li>
-		<li><a href="Help.html"><span class="icon bz"></span>帮助</a></li>
+		<li class="active"><a href="SearchMain.html"><span class="icon hs"><em>hs</em></span>沪深</a></li>
+		<li><a href="SearcOtc.html"><span class="icon xs"><em>hs</em></span>新三板</a></li>
+		<li><a href="SearchUs.html"><span class="icon mg"><em>hs</em></span>美股</a></li>
+		<li><a href="SearchInteraction.html"><span class="icon hd"><em>hs</em></span>互动平台</a></li>
+		<li><a href="SearchLaw.html"><span class="icon fg"><em>hs</em></span>法规</a></li>
+		<li><a href="Help.html"><span class="icon bz"><em>hs</em></span>帮助</a></li>
 	</ul>
 	<div class="user-info">
 		<div class="my-collection"><a href=""><span class="collection-icon"></span>我的收藏</a></div>
@@ -41,7 +41,7 @@
 	<div class="detail-title">
 		<a id="btn_company" class="stock" href="">888888</a>
 		<div class="div-wrap">
-			<div id="span_title" class="span-title" href="">国浩律师（上海）事务所关于公司发行股份购买资产并募集配套资金暨关联交易之非公开发行股票募集配套资金发行过程和认购对象合规性的见证法律意见书国浩律师（上海）事务所关于公司发行股份购买资产并募集配套资金暨关联交易之非公开发行股票募集配套资金发行过程和认购对象合规性的见证法律意见书</div>
+			<div id="span_title" class="span-title" href=""><h1>国浩律师（上海）事务所关于公司发行股份购买资产并募集配套资金暨关联交易之非公开发行股票募集配套资金发行过程和认购对象合规性的见证法律意见书国浩律师（上海）事务所关于公司发行股份购买资产并募集配套资金暨关联交易之非公开发行股票募集配套资金发行过程和认购对象合规性的见证法律意见书</h1></div>
 			<a class="source" href=""></a>
 		</div>
 		<div class="fr">
@@ -163,7 +163,10 @@
 				</li>
 				<li>
 					<a class="info navlist" href="javascript:void(0)">援引文件</a>
-					<div class="info-content tablist">援引文件</div>
+					<div class="info-content tablist">
+						<a href=""></a>
+						<a href=""></a>
+					</div>
 				</li>
 				<li>
 					<a class="adjacent navlist" href="javascript:void(0)">相关公告</a>
@@ -176,31 +179,5 @@
 	<!-- content Wrap End -->
 </section>
 <!-- Main End -->
-<script>
-$(document).ready(function(){
-	$('#span_title').mouseenter(function(){
-		$('#span_title').stop(true).animate({'height':'120px'},500);
-	})
-	$('#span_title').mouseleave(function(){
-		$('#span_title').stop(true).animate({'height':'40px'},500);
-	})
-	//调整主题内容的高度
-	var windowHeight = $(window).height();
-    $("#content").height(windowHeight - 210);
-	$(window).resize(function() {
-  		var windowHeight = $(window).height();
-    	$("#content").height(windowHeight - 210);
-	});
-	//right aside 切换
-	$('.navlist').on('click',function(e){
-		$(this).parent().find('.tablist').addClass('active');
-		$(this).parent().siblings().find('.tablist').removeClass('active');
-	})
-	//二级标题的切换
-	$('.drop-down').on('click',function(){
-		$(this).parent().parent().find('.two-leavel').slideToggle();
-	})
-})	
-</script>
 </body>
 </html>

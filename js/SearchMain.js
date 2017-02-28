@@ -1,41 +1,80 @@
 ;$(document).ready(function(){
 	//日期
-	$('#date-text').on('click',function(){
+	$('#date_text').on('click',function(){
 		$('#lst_periods').toggleClass('active');
 	});
 
 	var today = new Date();
     var defaultDayStart = new Date(2000, 0, 1);
-    $("#input_ds").val(defaultDayStart.getFullYear() + "/" + (defaultDayStart.getMonth() + 1) + "/" + defaultDayStart.getDate());
-    $("#input_de").val(today.getFullYear() + "/" + (today.getMonth() + 1) + "/" + today.getDate());
-    $("#lst_periods .date").on("click", function () {
+    $('#input_ds').val(defaultDayStart.getFullYear() + '/' + (defaultDayStart.getMonth() + 1) + '/' + defaultDayStart.getDate());
+    $('#input_de').val(today.getFullYear() + '/' + (today.getMonth() + 1) + '/' + today.getDate());
+    $('#lst_periods .date').on('click', function () {
         var opt;
         switch ($(this).text()) {
-            case "最近一周": opt = 1; break;
-            case "最近一月": opt = 2; break;
-            case "最近三月": opt = 3; break;
-            case "最近六月": opt = 4; break;
-            case "最近一年": opt = 5; break;
-            case "最近三年": opt = 6; break;
-            case "全部时间": opt = 7; break;
-            case "2016年": opt = 2016; break;
-            case "2015年": opt = 2015; break;
-            case "2014年": opt = 2014; break;
-            case "2013年": opt = 2013; break;
+            case '最近一周': opt = 1; break;
+            case '最近一月': opt = 2; break;
+            case '最近三月': opt = 3; break;
+            case '最近六月': opt = 4; break;
+            case '最近一年': opt = 5; break;
+            case '最近三年': opt = 6; break;
+            case '全部时间': opt = 7; break;
+            case '2016年': opt = 2016; break;
+            case '2015年': opt = 2015; break;
+            case '2014年': opt = 2014; break;
+            case '2013年': opt = 2013; break;
             default: opt = 7; break;
         }
-        $("#input_ds").val(getStartDate(opt));
-        $("#input_de").val(getEndDate(opt));
+        $('#input_ds').val(getStartDate(opt));
+        $('#input_de').val(getEndDate(opt));
 	});
     //高级搜索
-    $('#senior-search').on('click',function(){
-        $('#div_multi').toggleClass('active');
-        $('#sure_btn').toggleClass('active');
+    $('#senior_search').on('click',function(){
+        //公司代码
+        $('#code_search').toggleClass('active');
+        //单框搜索
+        $('#input_search').toggleClass('hideSelf');
+        //高级搜索框
+        $('.div-multi-item').toggleClass('active');
+        //高级搜索按钮
+        $('#senior_btn_wrap').toggleClass('active');
+        $('.search-icon').toggleClass('toggle-icon');
     })
     //filter类别切换
     $('.filter-title').on('click',function(){
         $(this).parent().find('.filter-list').toggleClass('active');
         $(this).parent().siblings().find('.filter-list').removeClass('active');
+    })
+    //搜索结果的切换
+    $('.result-area').on('click',function(){
+        $(this).find('.paras-wrap').slideToggle();
+        $(this).toggleClass('bg');
+    });
+    //展开所有
+    $("#btn_expandAll").click(function () {
+        if ($(this).html() === "全部展开") {
+            $(".result-area").find(".paras-wrap").slideDown();
+            $('.result-area').addClass('bg');
+            $(this).html("全部收起");
+        } else {
+            $(".result-area").find(".paras-wrap").slideUp();
+            $('.result-area').removeClass('bg');
+            $(this).html("全部展开");
+        }
+    });
+    $('#span_title').mouseenter(function(){
+        $('#span_title').stop(true).animate({'height':'120px'},500);
+    })
+    $('#span_title').mouseleave(function(){
+        $('#span_title').stop(true).animate({'height':'40px'},500);
+    })
+    //right aside 切换
+    $('.navlist').on('click',function(e){
+        $(this).parent().find('.tablist').addClass('active');
+        $(this).parent().siblings().find('.tablist').removeClass('active');
+    })
+    //二级标题的切换
+    $('.drop-down').on('click',function(){
+        $(this).parent().parent().find('.two-leavel').slideToggle();
     })
     //获取数据
     /*var loginBody = {

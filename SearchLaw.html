@@ -4,12 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>搜披露-法规</title>
-	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<title>搜披露-沪深股市披露检查</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/SearchMain.css">
 	<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+	<script type="text/javascript" src="./js/SearchMain.js"></script>
+	<script type="text/javascript" src="./js/md5.js"></script>
 	<!--[if lte IE 9]>
 		<script src="./js/html5shiv.min.js"></script>
 	<![endif]-->
@@ -17,46 +21,264 @@
 <body>
 <!-- Nav Start -->
 <nav class="nav">
-	<div class="logo">Factminr<img src="" alt=""></div>
+	<a class="logo" href=""></a>
 	<ul class="top-nav">
-		<li class="active"><a href="SearchMain.html">沪深</a></li>
-		<li><a href="SearcOtc.html">新三板</a></li>
-		<li><a href="SearchUs.html">美股</a></li>
-		<li><a href="SearchInteraction.html">互动平台</a></li>
-		<li><a href="SearchLaw.html">法规</a></li>
-		<li><a href="Help.html">帮助</a></li>
+		<li class="active"><a href="SearchMain.html"><span class="icon hs"><em>hs</em></span>沪深</a></li>
+		<li><a href="SearcOtc.html"><span class="icon xs"><em>hs</em></span>新三板</a></li>
+		<li><a href="SearchUs.html"><span class="icon mg"><em>hs</em></span>美股</a></li>
+		<li><a href="SearchInteraction.html"><span class="icon hd"><em>hs</em></span>互动平台</a></li>
+		<li><a href="SearchLaw.html"><span class="icon fg"><em>hs</em></span>法规</a></li>
+		<li><a href="Help.html"><span class="icon bz"><em>hs</em></span>帮助</a></li>
 	</ul>
+	<div class="user-info">
+		<div class="my-collection"><a href=""><span class="collection-icon"></span>我的收藏</a></div>
+		<div class="history"><a href=""><span class="history-icon"></span>历史记录</a></div>
+		<div class="user-mes"><a href="">user-name</a></div>
+		<div class="logout"><a class="logout-icon" href=""></a></div>
+	</div>
 </nav>
 <!-- Nav End -->
 <!-- Main Start -->
 <section class="mainWrap">
 	<!-- left Start -->
-	<section class="left-main pull-left">
-		<div class="container">
+	<section class="left-main">
+		<div class="main-top">
 			<!-- Search Start -->
-			<div class="row search-wrap">
-				<div class="col-xs-12">这是搜索区域</div>
-			</div>
+			<div class="search-wrap">
+				<div>
+					<div class="left-search">
+						<div class="code-search" id="code_search">
+							<input class="code" type="text" placeholder="请输入公司代码" autocomplete="off">
+						</div>
+						<div class="date-select">
+							<input id="input_ds" name="ds" type="text" class="date-input"><span class=""> ~ </span><input id="input_de" name="de" type="text" class="date-input">
+			            	<button class="date-text" id="date_text">...</button>
+							<ul id="lst_periods" class="lst_periods">
+			                    <li><a href="javascript:void(0)" class="date">最近一周</a></li>
+			                    <li><a href="javascript:void(0)" class="date">最近一月</a></li>
+			                    <li><a href="javascript:void(0)" class="date">最近三月</a></li>
+			                    <li><a href="javascript:void(0)" class="date">最近六月</a></li>
+			                    <li><a href="javascript:void(0)" class="date">最近一年</a></li>
+			                    <li><a href="javascript:void(0)" class="date">最近三年</a></li>
+			                    <li><a href="javascript:void(0)" class="date">2016年</a></li>
+			                    <li><a href="javascript:void(0)" class="date">2015年</a></li>
+			                    <li><a href="javascript:void(0)" class="date">2014年</a></li>
+			                    <li><a href="javascript:void(0)" class="date">2013年</a></li>
+			                    <li><a href="javascript:void(0)" class="date">全部时间</a></li>
+			            	</ul>
+						</div>
+					</div>
+					<div class="middle-search">
+						<div class="input-search" id="input_search">
+							<input class="text-btn" type="text" placeholder="hah "><button class="search-btn"><span class="search-bnt-icon"></span></button>
+						</div>
+						<div>
+						<div class="div-multi-item">
+		                    <div class="item1">
+		                        <span>标题</span>
+		                        <input id="input_tm" name="tm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
+		                    </div>
+		                    <div class="item2">
+		                        <input id="input_ts" name="ts" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
+		                    </div>
+		                    <div class="item3">
+		                        <input id="input_tn" name="tn" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
+		                    </div>
+		                </div>
+		                <div class="div-multi-item">
+		                    <div class="item1">
+		                        <span>正文</span>
+		                        <input id="input_tm" name="tm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
+		                    </div>
+		                    <div class="item2">
+		                        <input id="input_ts" name="ts" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
+		                    </div>
+		                    <div class="item3">
+		                        <input id="input_tn" name="tn" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
+		                    </div>
+		                </div>
+						</div>
+					</div>
+					<div class="right-search">
+						<div class="senior-search">
+							<a id="senior_search" href="javascript:void(0)">高级<span class="search-icon"></span></a>
+						</div>
+						<div class="reset">
+							<a id="reset_btn" href="javascript:void(0)">重置</a>
+						</div>
+						<div class="senior-btn-wrap" id="senior_btn_wrap">
+							<button id="senior_btn" class="senior-btn"><span class="search-btn-icon"></span></button>
+						</div>
+					</div>
+				</div>
+				<div class="label-wrap" id="label_wrap">
+				<a class="filter-label market" href="javascript:void(0)">市场<span class="filter-close">x</span></a>
+				<a class="filter-label notice" href="javascript:void(0)">公告<span class="filter-close">x</span></a>
+				<a class="filter-label industry" href="javascript:void(0)">行业<span class="filter-close">x</span></a>
+				<a class="filter-label local" href="javascript:void(0)">地域<span class="filter-close">x</span></a>
+				<a class="filter-label company" href="javascript:void(0)">公司<span class="filter-close">x</span></a>
+				</div>
+				<input id="sure_btn" class="btn" type="submit" value="确定">
 			<!-- Search End -->
-			<!-- content Start -->
-			<div class="row content">
-				<div class="col-xs-12">这是搜索结果显示区域</div>
 			</div>
-			<!-- content End -->
 		</div>
+		<!-- content Start -->
+		<div class="content hideSelf">
+			<div class="content-show">
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
+				<a href="" class="getMore">查看更多</a>
+			</div>
+		</div>
+		<div class="result">
+			<div class="result-top mb10">
+				<div class="result-info"><span class="result-icon"></span>找到<span class="result-num">4,446</span>个结果</div>
+				<div class="result-filter">
+					<a class="recently" href="javascript:void(0)">最近</a>
+					<a class="relative" href="javascript:void(0)">相关</a>
+					<a id="btn_expandAll" class="expand-all" href="javascript:void(0)">全部展开</a>
+				</div>
+			</div>
+			<div class="result-show">
+				<div id="div_result_0" class="result-area bg temp">
+					<div class="result-item">
+						<a class="stock" href="">888888</a>
+						<a class="title" href="">世纪优优：【临时公告】世纪优优：股票发行方案</a><span>2017-2-24</span>
+						<a class="source" href=""></a>
+					</div>
+					<div class="paras-wrap">
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+					</div>
+				</div>
+				<div id="div_result_1" class="result-area temp">
+					<div class="result-item">
+						<a class="stock" href="">888888</a>
+						<a class="title" href="">世纪优优：【临时公告】世纪优优：股票发行方案</a><span>2017-2-24</span>
+						<a class="source" href=""></a>
+					</div>
+					<div class="paras-wrap hideSelf">
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- content End -->
 	</section>
 	<!-- left End -->
 	<!-- right Start -->
-	<section class="right-filter pull-left" style="background-color: yellow ; width: 28%">
-		<div class="container">
-			<aside class="row asidebar">
-				<div class="col-xs-12">这是筛选区域</div>
-			</aside>
+	<section class="right-filter">
+		<div class="filter-wrap">
+			<ul>
+				<li>
+					<a class="filter-title" href="javascript:void(0)"><span class="market-icon"></span>市场类型</a>
+					<div class="filter-list active">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+				<li>
+					<a class="filter-title" href="javascript:void(0)"><span class="notice-icon"></span>公告类型</a>
+					<div class="filter-list">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+				<li>
+					<a class="filter-title" href="javascript:void(0)"><span class="industry-icon"></span>行业</a>
+					<div class="filter-list">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+				<li>
+					<a class="filter-title" href="javascript:void(0)"><span class="local-icon"></span>地域</a>
+					<div class="filter-list">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+				<li>
+					<a class="filter-title" href="javascript:void(0)"><span class="company-icon"></span>公司</a>
+					<div class="filter-list">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+			</ul>
 		</div>
 	</section>
 	<!-- right End -->
 </section>
-
 
 <!-- Main End -->
 </body>

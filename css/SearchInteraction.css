@@ -1,0 +1,12 @@
+.result .result-show .result-area .result-item span {
+  margin-right: 0;
+}
+.result .result-show .result-area .paras-wrap {
+  padding-left: 86px;
+}
+.result .result-show .result-area .paras-wrap .problem {
+  font-weight: bold;
+}
+.result .result-show .result-area .paras-wrap .answer {
+  border: none;
+}

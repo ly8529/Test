@@ -64,46 +64,32 @@ em {
   position: absolute;
   display: inline-block;
   width: 26px;
-  height: 30px;
+  height: 32px;
   top: 18px;
   left: 2px;
-  background: url('../img/sprite.png') no-repeat -2px -212px;
+  background: url('../img/sprite1.png') no-repeat 0 0;
+}
+.nav .top-nav li a .icon em {
+  position: absolute;
+  width: 26px;
+  height: 32px;
+  top: -18px;
+  left: 6px;
+  color: #546b91;
+  text-decoration: none;
+  text-shadow: 1px 2px 2px #5c606a;
 }
 .nav .top-nav li a .xs {
-  background-position: -1px -250px;
-}
-.nav .top-nav li a .mg {
-  background-position: -1px -285px;
-}
-.nav .top-nav li a .hd {
-  background-position: -1px -321px;
-}
-.nav .top-nav li a .fg {
-  background-position: -2px -359px;
-}
-.nav .top-nav li a .bz {
-  background-position: -2px -395px;
+  background-position: 0 -41px;
 }
 .nav .top-nav li a:hover {
   color: #fff;
 }
-.nav .top-nav li a:hover .hs {
-  background-position: -1px -1px;
+.nav .top-nav li a:hover em {
+  color: #e69c1f;
 }
-.nav .top-nav li a:hover .xs {
-  background-position: -1px -36px;
-}
-.nav .top-nav li a:hover .mg {
-  background-position: -1px -70px;
-}
-.nav .top-nav li a:hover .hd {
-  background-position: -1px -108px;
-}
-.nav .top-nav li a:hover .fg {
-  background-position: -2px -144px;
-}
-.nav .top-nav li a:hover .bz {
-  background-position: -1px -178px;
+.nav .top-nav li.active .icon em {
+  color: #e69c1f;
 }
 .nav .user-info {
   float: right;
@@ -213,6 +199,76 @@ em {
 .filter-title .company-icon {
   background-position: -36px -148px;
 }
+.date-select {
+  position: relative;
+  margin-left: 10px;
+}
+.date-select .lst_periods {
+  display: none;
+  position: absolute;
+  width: 238px;
+  margin-top: 10px;
+  padding: 10px 0 20px 0;
+  border: 1px solid #dbe0e4;
+  border-radius: 3px;
+  background: #fff;
+  z-index: 999;
+}
+.date-select .lst_periods .date {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.date-select .lst_periods li {
+  padding: 0 10px;
+}
+.date-select .lst_periods li:hover {
+  background-color: #eee;
+}
+.date-select .lst_periods .btn {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #dbe0e4;
+  vertical-align: top;
+  cursor: pointer;
+}
+.date-select .date-text {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 20px;
+  padding-right: 8px;
+  margin-right: 7px;
+  text-align: center;
+  border: 1px solid #dbe0e4;
+  border-radius: 5px;
+  background: #fff;
+}
+.date-select .date-text .date-icon {
+  position: absolute;
+  width: 20px;
+  height: 8px;
+  right: 0;
+  top: 18px;
+  background: url('../img/sprite.png') no-repeat -36px 0;
+}
+.date-select .date-input {
+  display: inline-block;
+  width: 92px;
+  height: 40px;
+  padding: 4px 8px 4px 12px;
+  border: 1px solid #dbe0e4;
+  border-radius: 3px;
+  box-shadow: none;
+  vertical-align: top;
+}
 .main-top {
   margin: 0 auto 10px;
   background-color: #fff;
@@ -241,74 +297,6 @@ em {
   padding: 10px 0 10px 10px;
   border-radius: 3px;
   border: 1px solid #dbe0e4;
-}
-.main-top .search-wrap .left-search .date-select {
-  position: relative;
-  margin-left: 10px;
-}
-.main-top .search-wrap .left-search .date-select .lst_periods {
-  display: none;
-  position: absolute;
-  width: 238px;
-  margin-top: 10px;
-  padding: 10px 0 20px 0;
-  border: 1px solid #dbe0e4;
-  border-radius: 3px;
-  background: #fff;
-  z-index: 999;
-}
-.main-top .search-wrap .left-search .date-select .lst_periods .date {
-  height: 40px;
-  line-height: 40px;
-}
-.main-top .search-wrap .left-search .date-select .lst_periods li {
-  padding: 0 10px;
-}
-.main-top .search-wrap .left-search .date-select .lst_periods li:hover {
-  background-color: #eee;
-}
-.main-top .search-wrap .left-search .date-select .lst_periods .btn {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  margin-left: 10px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 3px;
-  border: 1px solid #dbe0e4;
-  vertical-align: top;
-  cursor: pointer;
-}
-.main-top .search-wrap .left-search .date-select .date-text {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  line-height: 20px;
-  padding-right: 10px;
-  margin-right: 7px;
-  text-align: center;
-  border: 1px solid #dbe0e4;
-  border-radius: 5px;
-  background: #fff;
-}
-.main-top .search-wrap .left-search .date-select .date-text .date-icon {
-  position: absolute;
-  width: 20px;
-  height: 8px;
-  right: 0;
-  top: 18px;
-  background: url('../img/sprite.png') no-repeat -36px 0;
-}
-.main-top .search-wrap .left-search .date-select .date-input {
-  display: inline-block;
-  width: 92px;
-  height: 40px;
-  padding: 4px 12px;
-  border: 1px solid #dbe0e4;
-  border-radius: 3px;
-  box-shadow: none;
-  vertical-align: top;
 }
 .main-top .search-wrap .middle-search {
   display: inline-block;
@@ -372,6 +360,7 @@ em {
   height: 40px;
   padding-left: 10px;
   border: 1px solid #dbe0e4;
+  outline: none;
 }
 .main-top .search-wrap .middle-search .div-multi-item .item1 .keyword {
   border-left: none;
@@ -524,6 +513,16 @@ em {
   background-color: #fff;
   cursor: pointer;
 }
+.result .expand-all {
+  display: inline-block;
+  width: 120px;
+  height: 40px;
+  margin: 0 10px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #dbe0e4;
+}
 .result .result-top {
   background-color: #fff;
   height: 52px;
@@ -578,16 +577,6 @@ em {
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
 }
-.result .result-top .result-filter .expand-all {
-  display: inline-block;
-  width: 120px;
-  height: 40px;
-  margin: 0 10px;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 3px;
-  border: 1px solid #dbe0e4;
-}
 .result .result-show {
   padding: 20px;
   border: 1px solid #dbe0e4;
@@ -606,6 +595,9 @@ em {
   height: 50px;
   line-height: 30px;
   padding: 9px 10px;
+}
+.result .result-show .result-area .result-item h2 {
+  display: inline-block;
 }
 .result .result-show .result-area .result-item .stock {
   display: inline-block;
@@ -656,4 +648,28 @@ em {
 .result .result-show .result-area:hover .stock,
 .result .result-show .result-area.bg .stock {
   background: #fff;
+}
+.stock-result {
+  display: none;
+  position: absolute;
+  width: 240px;
+  padding: 5px 0;
+  left: 12px;
+  top: 42px;
+  background: #fff;
+  border: 1px solid #dbe0e4;
+  border-radius: 3px;
+  z-index: 10;
+}
+.stock-result li {
+  padding-left: 12px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.stock-result li:first-child {
+  background-color: #eee;
+}
+.stock-result li:hover {
+  background-color: #eee;
 }

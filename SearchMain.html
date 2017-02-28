@@ -23,12 +23,12 @@
 <nav class="nav">
 	<a class="logo" href=""></a>
 	<ul class="top-nav">
-		<li class="active"><a href="SearchMain.html"><span class="icon hs"></span>沪深</a></li>
-		<li><a href="SearcOtc.html"><span class="icon xs"></span>新三板</a></li>
-		<li><a href="SearchUs.html"><span class="icon mg"></span>美股</a></li>
-		<li><a href="SearchInteraction.html"><span class="icon hd"></span>互动平台</a></li>
-		<li><a href="SearchLaw.html"><span class="icon fg"></span>法规</a></li>
-		<li><a href="Help.html"><span class="icon bz"></span>帮助</a></li>
+		<li class="active"><a href="SearchMain.html"><span class="icon hs"><em>hs</em></span>沪深</a></li>
+		<li><a href="SearcOtc.html"><span class="icon xs"><em>hs</em></span>新三板</a></li>
+		<li><a href="SearchUs.html"><span class="icon mg"><em>hs</em></span>美股</a></li>
+		<li><a href="SearchInteraction.html"><span class="icon hd"><em>hs</em></span>互动平台</a></li>
+		<li><a href="SearchLaw.html"><span class="icon fg"><em>hs</em></span>法规</a></li>
+		<li><a href="Help.html"><span class="icon bz"><em>hs</em></span>帮助</a></li>
 	</ul>
 	<div class="user-info">
 		<div class="my-collection"><a href=""><span class="collection-icon"></span>我的收藏</a></div>
@@ -47,12 +47,12 @@
 			<div class="search-wrap">
 				<div>
 					<div class="left-search">
-						<div class="code-search" id="code-search">
+						<div class="code-search" id="code_search">
 							<input class="code" type="text" placeholder="请输入公司代码" autocomplete="off">
 						</div>
 						<div class="date-select">
 							<input id="input_ds" name="ds" type="text" class="date-input"><span class=""> ~ </span><input id="input_de" name="de" type="text" class="date-input">
-			            	<button class="date-text" id="date-text">...</button>
+			            	<button class="date-text" id="date_text">...</button>
 							<ul id="lst_periods" class="lst_periods">
 			                    <li><a href="javascript:void(0)" class="date">最近一周</a></li>
 			                    <li><a href="javascript:void(0)" class="date">最近一月</a></li>
@@ -69,11 +69,11 @@
 						</div>
 					</div>
 					<div class="middle-search">
-						<div class="input-search" id="input-search">
+						<div class="input-search" id="input_search">
 							<input class="text-btn" type="text" placeholder="hah "><button class="search-btn"><span class="search-bnt-icon"></span></button>
 						</div>
 						<div>
-						<div class="div_multi_item">
+						<div class="div-multi-item">
 		                    <div class="item1">
 		                        <span>标题</span>
 		                        <input id="input_tm" name="tm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
@@ -85,7 +85,7 @@
 		                        <input id="input_tn" name="tn" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
 		                    </div>
 		                </div>
-		                <div class="div_multi_item">
+		                <div class="div-multi-item">
 		                    <div class="item1">
 		                        <span>正文</span>
 		                        <input id="input_tm" name="tm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
@@ -101,17 +101,17 @@
 					</div>
 					<div class="right-search">
 						<div class="senior-search">
-							<a id="senior-search" href="javascript:void(0)">高级<span class="search-icon"></span></a>
+							<a id="senior_search" href="javascript:void(0)">高级<span class="search-icon"></span></a>
 						</div>
 						<div class="reset">
-							<a id="reset-btn" href="javascript:void(0)">重置</a>
+							<a id="reset_btn" href="javascript:void(0)">重置</a>
 						</div>
-						<div class="senior-btn-wrap" id="senior-btn-wrap">
-							<button id="senior-btn" class="senior-btn"><span class="search-btn-icon"></span></button>
+						<div class="senior-btn-wrap" id="senior_btn_wrap">
+							<button id="senior_btn" class="senior-btn"><span class="search-btn-icon"></span></button>
 						</div>
 					</div>
 				</div>
-				<div class="label-wrap" id="label-wrap">
+				<div class="label-wrap" id="label_wrap">
 				<a class="filter-label market" href="javascript:void(0)">市场<span class="filter-close">x</span></a>
 				<a class="filter-label notice" href="javascript:void(0)">公告<span class="filter-close">x</span></a>
 				<a class="filter-label industry" href="javascript:void(0)">行业<span class="filter-close">x</span></a>
@@ -150,6 +150,61 @@
 				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
 				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
 				<a href="" class="getMore">查看更多</a>
+			</div>
+		</div>
+		<div class="result hideSelf">
+			<div class="result-top mb10">
+				<div class="result-info"><span class="result-icon"></span>找到<span class="result-num">4,446</span>个结果</div>
+				<div class="result-filter">
+					<a class="recently" href="javascript:void(0)">最近</a>
+					<a class="relative" href="javascript:void(0)">相关</a>
+					<a id="btn_expandAll" class="expand-all" href="javascript:void(0)">全部展开</a>
+				</div>
+			</div>
+			<div class="result-show">
+				<div id="div_result_0" class="result-area bg temp">
+					<div class="result-item">
+						<a class="stock" href="">888888</a>
+						<a class="title" href="">世纪优优：【临时公告】世纪优优：股票发行方案</a><span>2017-2-24</span>
+						<a class="source" href=""></a>
+					</div>
+					<div class="paras-wrap">
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+					</div>
+				</div>
+				<div id="div_result_1" class="result-area temp">
+					<div class="result-item">
+						<a class="stock" href="">888888</a>
+						<a class="title" href="">世纪优优：【临时公告】世纪优优：股票发行方案</a><span>2017-2-24</span>
+						<a class="source" href=""></a>
+					</div>
+					<div class="paras-wrap hideSelf">
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<!-- content End -->
