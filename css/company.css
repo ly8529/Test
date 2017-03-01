@@ -22,14 +22,14 @@
 .detail-title .div-wrap {
   display: inline-block;
   position: relative;
-  width: 818px;
+  width: 778px;
 }
 .detail-title .div-wrap .span-title {
   height: 40px;
   line-height: 30px;
   font-size: 16px;
   display: inline-block;
-  width: 818px;
+  width: 778px;
   padding-top: 14px;
   padding-left: 88px;
   overflow: hidden;
@@ -51,10 +51,10 @@
 .detail-title .btn-fav {
   position: relative;
   display: inline-block;
-  width: 108px;
+  width: 78px;
   height: 40px;
   line-height: 40px;
-  padding-left: 48px;
+  padding-left: 38px;
   border-radius: 3px;
   border: 1px solid #dbe0e4;
 }
@@ -62,7 +62,7 @@
   position: absolute;
   width: 18px;
   height: 18px;
-  left: 22px;
+  left: 14px;
   top: 12px;
   background: url('../img/sprite1.png') no-repeat 0 -157px;
 }

@@ -53,10 +53,10 @@
 .detail-title .btn-fav {
   position: relative;
   display: inline-block;
-  width: 108px;
+  width: 82px;
   height: 40px;
   line-height: 40px;
-  padding-left: 48px;
+  padding-left: 38px;
   border-radius: 3px;
   border: 1px solid #dbe0e4;
 }
@@ -64,7 +64,7 @@
   position: absolute;
   width: 18px;
   height: 18px;
-  left: 22px;
+  left: 14px;
   top: 12px;
   background: url('../img/sprite1.png') no-repeat 0 -157px;
 }
@@ -186,6 +186,7 @@
   overflow-y: auto;
 }
 .content-wrap .left-main .content p {
+  font-family: inherit;
   padding-left: 30px;
   line-height: 40px;
 }

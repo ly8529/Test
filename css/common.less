@@ -255,7 +255,7 @@ em{
 		height: 40px;
 		line-height: 20px;
 		padding-right: 8px;
-		margin-right: 7px;
+		margin-right: 6px;
 		text-align: center;
 		border: 1px solid #dbe0e4;
 		border-radius: 5px;
@@ -386,6 +386,7 @@ em{
 			width: 180px;
 			vertical-align: top;
 			.senior-search{
+				
 				display: inline-block;
 				a{
 					position: relative;
@@ -395,7 +396,7 @@ em{
 					padding-left: 30px;
 					line-height: 40px;
 					border: 1px solid #dbe0e4;
-					border-radius: 3px;
+					border-radius: 3px;	
 					.search-icon{
 						position: absolute;
 						font-size: 20px;
@@ -407,9 +408,10 @@ em{
 						background: url('../img/sprite1.png') no-repeat -43px -21px;
 					}
 					.search-icon.toggle-icon{
-						background-position: -42px -6px;
+						background-position: -42px -5px;
 					}
 				}
+				
 			}
 			.reset{
 				display: inline-block;
@@ -427,6 +429,7 @@ em{
 			.senior-btn-wrap{
 				display: none;
 				margin-top: 10px;
+				cursor: pointer;
 				.senior-btn{
 					position: relative;
 					width: 162px;
@@ -443,6 +446,7 @@ em{
 						background: url('../img/sprite.png') no-repeat -36px -200px;
 					}
 				}
+				
 			}
 		}
 	}
@@ -532,6 +536,7 @@ em{
 }
 //搜索结果
 .result{
+	display: none;
 	.expand-all{
 		display: inline-block;
 		width: 120px;
@@ -669,7 +674,28 @@ em{
 			}
 		}
 	}
+	.result-pages{
+		text-align: center;
+		margin-top: 20px;
+		button{
+			display: inline-block;
+			width: 38px;
+			height: 40px;
+			border: 1px solid #dbe0e4;
+			background-color: #fff;
+			cursor: pointer;
+		}
+		.btn-loadPrior{
+			border-top-left-radius: 3px;
+			border-bottom-left-radius: 3px;
+		}
+		.btn-loadNext{
+			border-top-right-radius: 3px;
+			border-bottom-right-radius: 3px;
+		}
+	}
 }
+//代码检索
 .stock-result{
 	display: none;
 	position: absolute;
@@ -694,6 +720,41 @@ em{
 		background-color: #eee;
 	}
 }
-	
+//主题内容区域
+.content{
+	min-height: 500px;
+	background-color: #fff;
+	border: 1px solid #dbe0e4;
+	border-radius: 5px;
+	.content-show{
+		padding: 12px 22px;
+		a{
+			display: block;
+			height: 30px;
+			font-size: 12px;
+			span{
+				float: right;
+			}
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		.getMore{
+			position: relative;
+			display: block;
+			width: 148px;
+			height: 38px;
+			left: 50%;
+			margin-left: -74px;
+			line-height: 38px;
+			text-align: center;
+			border-radius: 5px;
+			border: 1px solid #dbe0e4;
+		}
+		.getMore:hover{
+			text-decoration: none;
+		}
+	}
+}
 
 

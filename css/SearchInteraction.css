@@ -1,3 +1,6 @@
+.result {
+  display: block;
+}
 .result .result-show .result-area .result-item span {
   margin-right: 0;
 }

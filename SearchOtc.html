@@ -48,7 +48,7 @@
 				<div>
 					<div class="left-search">
 						<div class="code-search" id="code_search">
-							<input class="code" type="text" placeholder="请输入公司代码" autocomplete="off">
+							<input name="c" class="code" type="text" placeholder="请输入公司代码" autocomplete="off">
 						</div>
 						<div class="date-select">
 							<input id="input_ds" name="ds" type="text" class="date-input"><span class=""> ~ </span><input id="input_de" name="de" type="text" class="date-input">
@@ -70,10 +70,10 @@
 					</div>
 					<div class="middle-search">
 						<div class="input-search" id="input_search">
-							<input class="text-btn" type="text" placeholder="hah "><button class="search-btn"><span class="search-bnt-icon"></span></button>
+							<input name="ss" class="text-btn" type="text" placeholder="hah "><button class="search-btn"><span class="search-bnt-icon"></span></button>
 						</div>
 						<div>
-						<div class="div-multi-item 10">
+						<div class="div-multi-item mb10">
 		                    <div class="item1">
 		                        <span>标题</span>
 		                        <input id="input_tm" name="tm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
@@ -88,13 +88,13 @@
 		                <div class="div-multi-item">
 		                    <div class="item1">
 		                        <span>正文</span>
-		                        <input id="input_tm" name="cm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
+		                        <input id="input_cm" name="cm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
 		                    </div>
 		                    <div class="item2">
-		                        <input id="input_ts" name="cs" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
+		                        <input id="input_cs" name="cs" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
 		                    </div>
 		                    <div class="item3">
-		                        <input id="input_tn" name="cn" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
+		                        <input id="input_cn" name="cn" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
 		                    </div>
 		                </div>
 						</div>
@@ -102,6 +102,7 @@
 					<div class="right-search">
 						<div class="senior-search">
 							<a id="senior_search" href="javascript:void(0)">高级<span class="search-icon"></span></a>
+							
 						</div>
 						<div class="reset">
 							<a id="reset_btn" href="javascript:void(0)">重置</a>
@@ -123,7 +124,7 @@
 			</div>
 		</div>
 		<!-- content Start -->
-		<div class="content hideSelf">
+		<div class="content">
 			<div class="content-show">
 				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
 				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
@@ -165,7 +166,7 @@
 				<div id="div_result_0" class="result-area bg temp">
 					<div class="result-item">
 						<a class="stock" href="">888888</a>
-						<a class="title" href="">世纪优优：【临时公告】世纪优优：股票发行方案</a><span>2017-2-24</span>
+						<h2><a class="title" href="">世纪优优：【临时公告】世纪优优：股票发行方案</a></h2><span>2017-2-24</span>
 						<a class="source" href=""></a>
 					</div>
 					<div class="paras-wrap">
@@ -186,7 +187,7 @@
 				<div id="div_result_1" class="result-area temp">
 					<div class="result-item">
 						<a class="stock" href="">888888</a>
-						<a class="title" href="">世纪优优：【临时公告】世纪优优：股票发行方案</a><span>2017-2-24</span>
+						<h2><a class="title" href="">世纪优优：【临时公告】世纪优优：股票发行方案</a></h2><span>2017-2-24</span>
 						<a class="source" href=""></a>
 					</div>
 					<div class="paras-wrap hideSelf">
@@ -204,6 +205,15 @@
 							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
 						</p>
 					</div>
+				</div>
+				<div class="result-pages">
+					<button id="btn_loadPrior" class="btn-loadPrior"><<</button>
+					<button class="foot-page">1</button>
+					<button class="foot-page">2</button>
+					<button class="foot-page">3</button>
+					<button class="foot-page">4</button>
+					<button class="foot-page">5</button>
+					<button id="btn_loadNext" class="btn-loadNext">>></button>
 				</div>
 			</div>
 		</div>

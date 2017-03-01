@@ -28,7 +28,13 @@
         $('#input_de').val(getEndDate(opt));
 	});
     //高级搜索
+    var flagSingle = true;
     $('#senior_search').on('click',function(){
+        if (flagSingle) {
+            flagSingle = false;//高级
+        } else {
+            flagSingle = true;//单框
+        }
         //公司代码
         $('#code_search').toggleClass('active');
         //单框搜索
@@ -240,17 +246,6 @@
         // $("#btn_applyFilters").removeClass("disabled");
         // $("#btn_resetFilters").removeClass("disabled");
     }
-    //兼容ie的输入框
-    /*var ieSearchDisclosureAdjust = function (body) {
-        body.ss = (body.ss == "请输入标题或正文中的关键词（至少两个字），多个词以空格隔开") ? "" : body.ss;
-        body.tm = (body.tm == "必含关键词...") ? "" : body.tm;
-        body.ts = (body.ts == "可含关键词...") ? "" : body.ts;
-        body.tn = (body.tn == "不含关键词...") ? "" : body.tn;
-        body.cm = (body.cm == "必含关键词...") ? "" : body.cm;
-        body.cs = (body.cs == "可含关键词...") ? "" : body.cs;
-        body.cn = (body.cn == "不含关键词...") ? "" : body.cn;
-        body.c = (body.c == "公司代码/简称") ? "" : body.c;
-        return body;
-    }  */
+    
 });
     

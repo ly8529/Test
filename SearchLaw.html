@@ -24,7 +24,7 @@
 	<a class="logo" href=""></a>
 	<ul class="top-nav">
 		<li class="active"><a href="SearchMain.html"><span class="icon hs"><em>hs</em></span>沪深</a></li>
-		<li><a href="SearcOtc.html"><span class="icon xs"><em>hs</em></span>新三板</a></li>
+		<li><a href="SearchOtc.html"><span class="icon xs"><em>hs</em></span>新三板</a></li>
 		<li><a href="SearchUs.html"><span class="icon mg"><em>hs</em></span>美股</a></li>
 		<li><a href="SearchInteraction.html"><span class="icon hd"><em>hs</em></span>互动平台</a></li>
 		<li><a href="SearchLaw.html"><span class="icon fg"><em>hs</em></span>法规</a></li>
@@ -73,7 +73,7 @@
 							<input class="text-btn" type="text" placeholder="hah "><button class="search-btn"><span class="search-bnt-icon"></span></button>
 						</div>
 						<div>
-						<div class="div-multi-item">
+						<div class="div-multi-item mb10">
 		                    <div class="item1">
 		                        <span>标题</span>
 		                        <input id="input_tm" name="tm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
@@ -88,13 +88,13 @@
 		                <div class="div-multi-item">
 		                    <div class="item1">
 		                        <span>正文</span>
-		                        <input id="input_tm" name="tm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
+		                        <input id="input_cm" name="cm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
 		                    </div>
 		                    <div class="item2">
-		                        <input id="input_ts" name="ts" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
+		                        <input id="input_cs" name="cs" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
 		                    </div>
 		                    <div class="item3">
-		                        <input id="input_tn" name="tn" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
+		                        <input id="input_cn" name="cn" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
 		                    </div>
 		                </div>
 						</div>
@@ -204,6 +204,15 @@
 							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
 						</p>
 					</div>
+				</div>
+				<div class="result-pages">
+					<button id="btn_loadPrior" class="btn-loadPrior"><<</button>
+					<button class="foot-page">1</button>
+					<button class="foot-page">2</button>
+					<button class="foot-page">3</button>
+					<button class="foot-page">4</button>
+					<button class="foot-page">5</button>
+					<button id="btn_loadNext" class="btn-loadNext">>></button>
 				</div>
 			</div>
 		</div>

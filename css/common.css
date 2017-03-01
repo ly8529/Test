@@ -245,7 +245,7 @@ em {
   height: 40px;
   line-height: 20px;
   padding-right: 8px;
-  margin-right: 7px;
+  margin-right: 6px;
   text-align: center;
   border: 1px solid #dbe0e4;
   border-radius: 5px;
@@ -398,7 +398,7 @@ em {
   background: url('../img/sprite1.png') no-repeat -43px -21px;
 }
 .main-top .search-wrap .right-search .senior-search a .search-icon.toggle-icon {
-  background-position: -42px -6px;
+  background-position: -42px -5px;
 }
 .main-top .search-wrap .right-search .reset {
   display: inline-block;
@@ -416,6 +416,7 @@ em {
 .main-top .search-wrap .right-search .senior-btn-wrap {
   display: none;
   margin-top: 10px;
+  cursor: pointer;
 }
 .main-top .search-wrap .right-search .senior-btn-wrap .senior-btn {
   position: relative;
@@ -512,6 +513,9 @@ em {
   border-radius: 3px;
   background-color: #fff;
   cursor: pointer;
+}
+.result {
+  display: none;
 }
 .result .expand-all {
   display: inline-block;
@@ -649,6 +653,26 @@ em {
 .result .result-show .result-area.bg .stock {
   background: #fff;
 }
+.result .result-pages {
+  text-align: center;
+  margin-top: 20px;
+}
+.result .result-pages button {
+  display: inline-block;
+  width: 38px;
+  height: 40px;
+  border: 1px solid #dbe0e4;
+  background-color: #fff;
+  cursor: pointer;
+}
+.result .result-pages .btn-loadPrior {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.result .result-pages .btn-loadNext {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
 .stock-result {
   display: none;
   position: absolute;
@@ -672,4 +696,39 @@ em {
 }
 .stock-result li:hover {
   background-color: #eee;
+}
+.content {
+  min-height: 500px;
+  background-color: #fff;
+  border: 1px solid #dbe0e4;
+  border-radius: 5px;
+}
+.content .content-show {
+  padding: 12px 22px;
+}
+.content .content-show a {
+  display: block;
+  height: 30px;
+  font-size: 12px;
+}
+.content .content-show a span {
+  float: right;
+}
+.content .content-show a:hover {
+  text-decoration: underline;
+}
+.content .content-show .getMore {
+  position: relative;
+  display: block;
+  width: 148px;
+  height: 38px;
+  left: 50%;
+  margin-left: -74px;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #dbe0e4;
+}
+.content .content-show .getMore:hover {
+  text-decoration: none;
 }
