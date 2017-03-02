@@ -69,14 +69,13 @@ em{
 						width: 26px;
 						height: 32px;
 						top: -18px;
-						left: 6px;
+						left: 5px;
 						color: #546b91;
+						font-size: 12px;
+						font-weight: bold;
 						text-decoration: none;
-						text-shadow: 1px 2px 2px #5c606a;
+						text-shadow: 1px 2px 1px #202020;
 					}
-				}
-				 .xs{
-					background-position: 0 -41px;
 				}
 			}
 			a:hover{
@@ -85,9 +84,19 @@ em{
 					color: #e69c1f;
 				}
 			}
+			a:active{
+				color: #fff;
+				em{
+					color: #e69c1f;
+				}
+			}
 		}
 		li.active{
+			a{
+				color:#fff;
+			}
 			.icon{
+				background-position: 0 -41px;
 				em{
 					color: #e69c1f;
 				}
@@ -325,6 +334,7 @@ em{
 					border: 1px solid #dbe0e4;
 					border-right: none;
 					vertical-align: top;
+					font-size: 12px;
 					border-bottom-left-radius: 3px;
 					border-top-left-radius: 3px;
 				}
@@ -734,12 +744,13 @@ em{
 	.content-show{
 		padding: 12px 22px;
 		a{
-			display: block;
+			display: inline-block;
 			height: 30px;
 			font-size: 12px;
-			span{
-				float: right;
-			}
+		}
+		span{
+			float: right;
+			color: #999;
 		}
 		a:hover{
 			text-decoration: underline;

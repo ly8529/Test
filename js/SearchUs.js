@@ -120,7 +120,7 @@ $(document).ready(function(){
         return body;
     }
    
-    var updateResultView = function(){
+   /* var updateResultView = function(){
         $('#div_content').hide();
         $('#div_result').show();
         var $temp = $('#div_result_0');
@@ -158,7 +158,7 @@ $(document).ready(function(){
             $result.insertAfter($('#div_result_' + i));
             $result.slideDown();
         }
-    }
+    }*/
 
     var updatePage = function(){
         $('#result_pages a.foot-page').remove();
@@ -267,14 +267,18 @@ $(document).ready(function(){
     var updateNewsView = function(){
     	var $content_show =  $('#content_show');
     	$content_show.empty();
+        var $ul = $('<ul></ul>')
     	for(i = 0; i < 20; i++){
-    		var $a = $('<a></a>');
-    		$a.text(i);
+            var $li = $('<li></li>')
+    		var $a = $('<a href=""></a>');
+    		$a.text('关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知');
     		var $span = $('<span></span>');
-    		$span.text(i);
-    		$a.append($span);
-    		$content_show.append($a);
+    		$span.text('2017-3-2');
+            $li.append($a);
+            $li.append($span);
+    		$ul.append($li);
     	}
+        $content_show.append($ul);
     	var $getMore = $('<a class="getMore">查看更多</a>');
     	$getMore.attr('href','');
     	$content_show.append($getMore);

@@ -126,6 +126,7 @@
 					vertical-align: top;
 				}
 				.match{
+					position: relative;
 					display: inline-block;
 					float: right;
 					width: 32px;
@@ -134,12 +135,30 @@
 					vertical-align: top;
 					border: 1px solid #dbe0e4;
 					background-color: #edefef;
+					cursor: pointer;
+					.icon{
+						position: absolute;
+						display: inline-block;
+						width: 14px;
+						height: 16px;
+						background: url('../img/sprite1.png') no-repeat
+					}	
 				}
 				.match-bottom{
 					border-right: 0;
+					.icon{
+						left: 10px;
+						top: 8px;
+						background-position: 0 -230px;
+					}
 				}
 				.match-top{
 					margin-right: 4px;
+					.icon{
+						left: 10px;
+						top: 7px;
+						background-position: 0 -202px;
+					}
 				}
 			}
 			.top-right{

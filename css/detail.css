@@ -128,6 +128,7 @@
   vertical-align: top;
 }
 .content-wrap .left-main .main-top .top-left .match {
+  position: relative;
   display: inline-block;
   float: right;
   width: 32px;
@@ -136,12 +137,30 @@
   vertical-align: top;
   border: 1px solid #dbe0e4;
   background-color: #edefef;
+  cursor: pointer;
+}
+.content-wrap .left-main .main-top .top-left .match .icon {
+  position: absolute;
+  display: inline-block;
+  width: 14px;
+  height: 16px;
+  background: url('../img/sprite1.png') no-repeat;
 }
 .content-wrap .left-main .main-top .top-left .match-bottom {
   border-right: 0;
 }
+.content-wrap .left-main .main-top .top-left .match-bottom .icon {
+  left: 10px;
+  top: 8px;
+  background-position: 0 -230px;
+}
 .content-wrap .left-main .main-top .top-left .match-top {
   margin-right: 4px;
+}
+.content-wrap .left-main .main-top .top-left .match-top .icon {
+  left: 10px;
+  top: 7px;
+  background-position: 0 -202px;
 }
 .content-wrap .left-main .main-top .top-right {
   float: right;
