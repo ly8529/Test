@@ -2,6 +2,9 @@ $(document).ready(function(){
 	//日期
 	$('#date_text').on('click',function(){
 		$('#lst_periods').toggleClass('active');
+		setTimeout(function(){
+			$('#lst_periods').toggleClass('active');
+		},5000);
 	});
 
 	var today = new Date();
@@ -47,8 +50,33 @@ $(document).ready(function(){
     })
     //filter类别切换
     $('.filter-title').on('click',function(){
-        $(this).parent().find('.filter-list').toggleClass('active');
-        $(this).parent().siblings().find('.filter-list').removeClass('active');
+    	$(this).parent().find('.filter-list').slideToggle();
+        $(this).parent().siblings().find('.filter-list').slideUp();
+
+        // $(this).parent().find('.filter-list').toggleClass('active');
+        // $(this).parent().siblings().find('.filter-list').removeClass('active');
+    })
+    $('.filter-title').mouseenter(function(){
+    	$(this).parent().find('.panel-wrap').show();
+        $(this).parent().siblings().find('.panel-wrap').hide();
+    })
+    $('.panel-wrap').mouseleave(function(){
+        $('.panel-wrap').hide();
+    })
+    $('.panel-list .left').on('click',function(){
+        $(this).parent().parent().find('.second-wrap.left').show();
+        $(this).parent().parent().find('.second-wrap.right').hide();
+        $(this).parent().parent().siblings().find('.second-wrap').hide();
+    })
+    $('.panel-list .right').on('click',function(){
+        $(this).parent().parent().find('.second-wrap.right').show();
+        $(this).parent().parent().find('.second-wrap.left').hide();
+        $(this).parent().parent().siblings().find('.second-wrap').hide();
+    })
+    $('.filter-width').on('click',function(){
+        $(this).parent().find('.test').show();
+        console.info($(this).parent().find('.test').css('height'));
+        $(this).parent().siblings().find('.test').hide();
     })
     //搜索结果的切换
     $('.result-area').on('click',function(){
@@ -228,10 +256,110 @@ $(document).ready(function(){
         $("#input_tn").val("");
         $("#input_cm").val("");
         $("#input_cs").val("");
-        $("#input_tn").val("");
+        $("#input_cn").val("");
         $("#input_stockcode").val("");
     };
     $("#btn_reset").bind("click", function () {
        reset();
     });
+    
+
+    var updateNewsView = function(){
+    	var $content_show =  $('#content_show');
+    	$content_show.empty();
+    	for(i = 0; i < 20; i++){
+    		var $a = $('<a></a>');
+    		$a.text(i);
+    		var $span = $('<span></span>');
+    		$span.text(i);
+    		$a.append($span);
+    		$content_show.append($a);
+    	}
+    	var $getMore = $('<a class="getMore">查看更多</a>');
+    	$getMore.attr('href','');
+    	$content_show.append($getMore);
+    }
+    updateNewsView();
+
+     //根据输入的data数组，生成panel
+    /*var generatePanel = function(data) {
+        var $div = $('<div class="panel_wrap"></div>');
+        var width = 300;
+        if (data.length <= 15) {
+            var $divFirstCol = $('<div class="div-panel div-panel1"></div>');
+            for (i = 0; i < data.length; i++) {
+                var $item = $('<a class="filter"></a>');
+                var $filter_value = $('<span class="filter-value"></span>')
+                $filter_value.text(i)//data[i].chs;
+                $item.append($filter_value);
+                $item.bind('click', {
+                    'ff': 2,
+                    'fv': data[i].name,
+                    'label': data[i].chs
+                }, function (e) {
+                    addFilter(e);
+                });
+                var $count = $('<span class="number"></span>');
+                $count.text(i)//data[i].count;
+                $item.append($count);
+                $divFirstCol.append($item);
+            }
+            $div.append($divFirstCol);
+        }
+        else if (data.length > 15 && data.length <= 30) {
+            width = 600;
+            $divFirstCol =$('<div class="div-panel div-panel1"></div>');
+            var $divSecondCol = $('<div class="div-panel div-panel2"></div>');
+            for (i = 0; i < data.length; i++) {
+                var $item = $('<a class="fliter"></a>');
+               	var $filter_value = $('<span class="filter-value"></span>')
+                $filter_value.text(data[i].chs);
+                $item.append($filter_value);
+                $item.bind('click', {
+                    'ff': 2,
+                    'fv': data[i].name,
+                    'label': data[i].chs
+                }, function (e) {
+                    addFilter(e);
+                });
+                var $count = $('<span class="number"></span>');
+                $count.text(data[i].count);
+                $item.append($count);
+                if (i <= 15) $divFirstCol.append($item);
+                else $divSecondCol.append($item);
+            }
+            $div.append($divFirstCol);
+            $div.append($divSecondCol);
+        }
+        else if (data.length > 30) {
+            width = 900;
+            $divFirstCol = $('<div class="div-panel div-panel1"></div>');
+            $divSecondCol = $('<div class="div-panel div-panel2"></div>');
+            var $divThirdCol = $('<div class="div-panel div-panel3"></div>');
+            for (i = 0; i < data.length; i++) {
+                var $item = $('<a class="filter"></a>');
+                var $filter_value = $('<span class="filter-value"></span>')
+                $filter_value.text(data[i].chs);
+                $item.append($filter_value);
+                $item.bind('click', {
+                    'ff': 2,
+                    'fv': data[i].name,
+                    'label': data[i].chs
+                }, function (e) {
+                    addFilter(e);
+                });
+                $count = $('<span class="number"></span>');
+                $count.text(data[i].count);
+                $item.append($count);
+                if (i <= 15) $divFirstCol.append($item);
+                else if (i > 15 && i <= 30) $divSecondCol.append($item);
+                else $divThirdCol.append($item);
+            }
+            $div.append($divFirstCol);
+            $div.append($divSecondCol);
+            $div.append($divThirdCol);
+        }
+        $div.css('width', width + 'px');
+        return $div;
+    }*/
 })

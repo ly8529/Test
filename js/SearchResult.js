@@ -513,7 +513,7 @@ $(document).ready(function () {
                 break;
             default:
         }
-
+ 
         $("#tab" + flagAt).tab("show");
     }
     $("#tab1").bind("click", { "n": 1 }, function (e) {
@@ -1113,5 +1113,110 @@ $(document).ready(function () {
     } else {
         getWarm();
     }
+
+
+
+
+
+
+
+     //根据输入的data数组，生成panel
+    var generatePanel = function(data) {
+        var $div = $("<div></div>");
+        var width = 300;
+        if (data.length <= 15) {
+            var $divFirstCol = $("<div class='col-xs-12'></div>");
+            for (i = 0; i < data.length; i++) {
+                var $item = $("<a href='javascript:void(0)' class='list-group-item panel-list-item filter'></a>");
+                $item.text(data[i].chs);
+                $item.bind("click", {
+                    "ff": 2,
+                    "fv": data[i].name,
+                    "label": data[i].chs
+                }, function (e) {
+                    addFilter(e);
+                });
+                var $count = $("<span class='badge'></span>");
+                $count.text(data[i].count);
+                $count.prependTo($item);
+                $divFirstCol.append($item);
+            }
+            $div.append($divFirstCol);
+        }
+        else if (data.length > 15 && data.length <= 30) {
+            width = 600;
+            $divFirstCol = $("<div class='col-xs-6'></div>");
+            var $divSecondCol = $("<div class='col-xs-6'></div>");
+            for (i = 0; i < data.length; i++) {
+                $item = $("<a href='javascript:void(0)' class='list-group-item panel-list-item filter'></a>");
+                $item.text(data[i].chs);
+                $item.bind("click", {
+                    "ff": 2,
+                    "fv": data[i].name,
+                    "label": data[i].chs
+                }, function (e) {
+                    addFilter(e);
+                });
+                $count = $("<span class='badge'></span>");
+                $count.text(data[i].count);
+                $count.prependTo($item);
+                if (i <= 15) $divFirstCol.append($item);
+                else $divSecondCol.append($item);
+            }
+            $div.append($divFirstCol);
+            $div.append($divSecondCol);
+        }
+        else if (data.length > 30) {
+            width = 900;
+            $divFirstCol = $("<div class='col-xs-4'></div>");
+            $divSecondCol = $("<div class='col-xs-4'></div>");
+            var $divThirdCol = $("<div class='col-xs-4'></div>");
+            for (i = 0; i < data.length; i++) {
+                $item = $("<a href='javascript:void(0)' class='list-group-item panel-list-item filter'></a>");
+                $item.text(data[i].chs);
+                $item.bind("click", {
+                    "ff": 2,
+                    "fv": data[i].name,
+                    "label": data[i].chs
+                }, function (e) {
+                    addFilter(e);
+                });
+                $count = $("<span class='badge'></span>");
+                $count.text(data[i].count);
+                $count.prependTo($item);
+                if (i <= 15) $divFirstCol.append($item);
+                else if (i > 15 && i <= 30) $divSecondCol.append($item);
+                else $divThirdCol.append($item);
+            }
+            $div.append($divFirstCol);
+            $div.append($divSecondCol);
+            $div.append($divThirdCol);
+        }
+        $div.css("width", width + "px");
+        return $div;
+    }
+
+    $("#btn_noticePanel").on("mouseenter", function () {
+        var $divParent = $("#div_noticePanel");
+        if ($divParent.css("display") != "none") return false;
+        var $div = generatePanel(results.notices);
+        if (results.notices.length <= 15) {
+            $divParent.css("left", "-340px");
+        } else if (results.notices.length > 15 && results.notices.length < 30) {
+            $divParent.css("left", "-640px");
+        } else {
+            $divParent.css("left", "-940px");
+        }
+        $("#div_noticePanel").find("div").eq(0).append($div);
+        $divParent.show();
+    });
+
+    $("#div_noticePanel").on("mouseleave", function() {
+        $("#div_noticePanel").find("div").eq(0).empty();
+        $("#div_noticePanel").hide();
+    });
+
+});
+
 
 });

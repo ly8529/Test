@@ -5,12 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<title>搜披露-沪深股市披露检查</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/SearchMain.css">
 	<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<!-- <script type="text/javascript" src="./js/bootstrap.min.js"></script> -->
 	<script type="text/javascript" src="./js/common.js"></script>
 	<script type="text/javascript" src="./js/SearchUs.js"></script>
 	<script type="text/javascript" src="./js/md5.js"></script>
@@ -48,7 +48,7 @@
 				<div>
 					<div class="left-search">
 						<div class="code-search" id="code_search">
-							<input name="c" class="code" type="text" placeholder="请输入公司代码" autocomplete="off">
+							<input id="input_stockcode" name="c" class="code" type="text" placeholder="请输入公司代码" autocomplete="off">
 						</div>
 						<div class="date-select">
 							<input id="input_ds" name="ds" type="text" class="date-input"><span class=""> ~ </span><input id="input_de" name="de" type="text" class="date-input">
@@ -70,7 +70,7 @@
 					</div>
 					<div class="middle-search">
 						<div class="input-search" id="input_search">
-							<input class="text-btn" type="text" placeholder="hah "><button class="search-btn"><span class="search-bnt-icon"></span></button>
+							<input id="input_ss" class="text-btn" type="text" placeholder="hah "><button class="search-btn"><span class="search-bnt-icon"></span></button>
 						</div>
 						<div>
 						<div class="div-multi-item mb10">
@@ -104,7 +104,7 @@
 							<a id="senior_search" href="javascript:void(0)">高级<span class="search-icon"></span></a>
 						</div>
 						<div class="reset">
-							<a id="reset_btn" href="javascript:void(0)">重置</a>
+							<a id="btn_reset" href="javascript:void(0)">重置</a>
 						</div>
 						<div class="senior-btn-wrap" id="senior_btn_wrap">
 							<button id="senior_btn" class="senior-btn"><span class="search-btn-icon"></span></button>
@@ -124,7 +124,7 @@
 		</div>
 		<!-- content Start -->
 		<div class="content">
-			<div class="content-show">
+			<div id="content_show" class="content-show">
 				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
 				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
 				<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知<span>2017-2-21</span></a>
@@ -225,7 +225,7 @@
 			<ul>
 				<li>
 					<a class="filter-title" href="javascript:void(0)"><span class="market-icon"></span>市场类型</a>
-					<div class="filter-list active">
+					<div class="filter-list block">
 						<a class="filter" href="">全部市场类型</a>
 						<a class="filter" href="">沪深主板</a>
 						<a class="filter" href="">深市主板</a>
@@ -233,6 +233,41 @@
 						<a class="filter" href="">深市创业板</a>
 						<a class="filter" href="">深市全部</a>
 						<a class="filter" href="">深市主板和中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+					<div class="panel-wrap">
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
 					</div>
 				</li>
 				<li>
@@ -246,6 +281,38 @@
 						<a class="filter" href="">深市全部</a>
 						<a class="filter" href="">深市主板和中小板</a>
 					</div>
+					<div class="panel-wrap">
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+					</div>	
 				</li>
 				<li>
 					<a class="filter-title" href="javascript:void(0)"><span class="industry-icon"></span>行业</a>
@@ -257,6 +324,112 @@
 						<a class="filter" href="">深市创业板</a>
 						<a class="filter" href="">深市全部</a>
 						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+					<div class="panel-wrap">
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter" href=""><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter" href=""><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+							<div class="second-wrap left">
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+							</div>
+							<div class="second-wrap right">
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter" href=""><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter" href=""><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+							<div class="second-wrap left">
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+							</div>
+							<div class="second-wrap right">
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+							<div class="second-wrap left">
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+							</div>
+							<div class="second-wrap right">
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+							<div class="second-wrap left">
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+							</div>
+							<div class="second-wrap right">
+								<a class="filter" href="">二级市场类型</a>
+								<a class="filter" href="">二级市场类型</a>
+							</div>
+						</div>
 					</div>
 				</li>
 				<li>
@@ -270,6 +443,38 @@
 						<a class="filter" href="">深市全部</a>
 						<a class="filter" href="">深市主板和中小板</a>
 					</div>
+					<div class="panel-wrap">
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+					</div>
 				</li>
 				<li>
 					<a class="filter-title" href="javascript:void(0)"><span class="company-icon"></span>公司</a>
@@ -281,6 +486,38 @@
 						<a class="filter" href="">深市创业板</a>
 						<a class="filter" href="">深市全部</a>
 						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+					<div class="panel-wrap">
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
+						<div class="panel-item">
+							<div class="panel-list">
+								<a class="filter left" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">99999</span></a>
+								<a class="filter right" href="javascript:void(0)"><span class="filter-value">一级市场类型</span><span class="count">9999</span></a>
+							</div>
+						</div>
 					</div>
 				</li>
 			</ul>
