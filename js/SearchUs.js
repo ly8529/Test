@@ -52,9 +52,6 @@ $(document).ready(function(){
     $('.filter-title').on('click',function(){
     	$(this).parent().find('.filter-list').slideToggle();
         $(this).parent().siblings().find('.filter-list').slideUp();
-
-        // $(this).parent().find('.filter-list').toggleClass('active');
-        // $(this).parent().siblings().find('.filter-list').removeClass('active');
     })
     $('.filter-title').mouseenter(function(){
     	$(this).parent().find('.panel-wrap').show();

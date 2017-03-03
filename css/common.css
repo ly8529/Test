@@ -681,6 +681,15 @@ em {
   border: 1px solid #dbe0e4;
   background-color: #fff;
   cursor: pointer;
+  margin-right: 5px;
+}
+.result .result-pages button:visited {
+  color: #fff;
+  background-color: #2d3349;
+}
+.result .result-pages button:hover {
+  color: #fff;
+  background-color: #2d3349;
 }
 .result .result-pages .btn-loadPrior {
   border-top-left-radius: 3px;
@@ -689,6 +698,16 @@ em {
 .result .result-pages .btn-loadNext {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+}
+.result .result-pages .disabled {
+  color: black;
+  background-color: #fff;
+  cursor: default;
+}
+.result .result-pages .disabled:hover {
+  color: black;
+  background-color: #fff;
+  cursor: default;
 }
 .stock-result {
   display: none;
