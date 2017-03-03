@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>搜披露-沪深股市披露检查</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/SearchMain.css">
+	<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+	<script type="text/javascript" src="./js/md5.js"></script>
+	<!--[if lte IE 9]>
+		<script src="./js/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<!-- Nav Start -->
+<nav class="nav">
+	<a class="logo" href=""></a>
+	<ul class="top-nav">
+		<li class="active"><a href="SearchMain.html"><span class="icon hs"><em>hs</em></span>沪深</a></li>
+		<li><a href="SearchOtc.html"><span class="icon xs"><em>hs</em></span>新三板</a></li>
+		<li><a href="SearchUs.html"><span class="icon mg"><em>hs</em></span>美股</a></li>
+		<li><a href="SearchInteraction.html"><span class="icon hd"><em>hs</em></span>互动平台</a></li>
+		<li><a href="SearchLaw.html"><span class="icon fg"><em>hs</em></span>法规</a></li>
+		<li><a href="Help.html"><span class="icon bz"><em>hs</em></span>帮助</a></li>
+	</ul>
+	<div class="user-info">
+		<div class="my-collection"><a href=""><span class="collection-icon"></span>我的收藏</a></div>
+		<div class="history"><a href=""><span class="history-icon"></span>历史记录</a></div>
+		<div class="user-mes"><a href="">user-name</a></div>
+		<div class="logout"><a class="logout-icon" href=""></a></div>
+	</div>
+</nav>
+<!-- Nav End -->
+<!-- Main Start -->
+<section class="mainWrap">
+	<!-- left Start -->
+	<section class="left-main">
+		<div class="main-top">
+			</div>
+		</div>
+		<!-- content Start -->
+		<div class="result" style="display: block;">
+			<div class="result-show">
+				<div class="result-pages" id="div_pages">
+					<button id="btn_loadPrior" class="btn-loadPrior"><<</button>
+					<button id="btn_loadNext" class="btn-loadNext">>></button>
+					<span id="total_page">共333页</span>
+				</div>
+			</div>
+		</div>
+		<!-- content End -->
+	</section>
+</section>
+<script type="text/javascript">
+	var pagePn = 1;
+	var results = {
+		pages: [1,2,3,4,5],
+		count: 240
+	};
+	var updatePage = function(){
+		$('#div_pages button.foot-page').remove();
+		var $loadNext = $('#btn_loadNext');
+
+		for(var i = 0; i < results.pages.length ;i++){
+			var $page = $('<button class="foot-page"></button>');
+            $page.bind('click', { 'p': results.pages[i] }, function (e) {
+                load(e);
+            });
+            $page.text(results.pages[i]);
+            if (pagePn == results.pages[i]) {
+                $page.attr('style', 'font-weight:bold');
+            } else {
+                $page.attr('style', '');
+            }
+            $page.insertBefore($loadNext);
+		}
+		var finalPage = Math.ceil(results.count / 20);
+		if(1 == results.pages[0]){
+			$('#btn_loadPrior').prop({'disabled':'disabled'});
+			$('#btn_loadPrior').addClass('disabled');
+		}else{
+			$('#btn_loadPrior').prop({'disabled':''});
+			$('#btn_loadPrior').removeClass('disabled');
+		}
+		if(results.pages.length < 5 || results.pages[4] == finalPage){
+			$('#btn_loadNext').prop('disabled','disabled');
+			$('#btn_loadNext').addClass('disabled');
+		}else{
+			$('#btn_loadNext').prop('disabled','');
+			$('#btn_loadNext').removeClass('disabled');
+		}
+	}
+	updatePage();
+
+	$('#btn_loadPrior').on('click',function(){
+		console.info(results.pages);
+		var finalPage = Math.ceil(results.count / 20);
+		if(results.pages[0] > 5){
+			var firstPage = results.pages[0] - 5;
+			results.pages = [];
+			for(i = firstPage; i < firstPage +5 ;i++){
+				results.pages.push(i);
+			}
+		}else{
+			results.pages = [];
+			for(var i = 1 ;i < Math.min(finalPage + 1, 6 ); i++){
+				results.pages.push(i);
+			}
+		}
+		updatePage();
+	});
+
+	$("#btn_loadNext").on("click", function () {
+		console.info(results.pages);
+        var lastPage = results.pages[results.pages.length - 1];
+        var finalPage = Math.ceil(results.count / 20);
+        if (finalPage > lastPage + 6) {
+            results.pages = [];
+            for (i = lastPage + 1; i < lastPage + 6; i++) {
+                results.pages.push(i);
+            }
+        } else {
+            results.pages = [];
+            for (i = finalPage - Math.min(4, finalPage - 1) ; i <= finalPage; i++) {
+                results.pages.push(i);
+            }
+        }
+        updatePage();
+    });
+
+</script>
+<!-- Main End -->
+</body>
+</html>
