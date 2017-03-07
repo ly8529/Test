@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="Pragma" content="no-cache">
+	<title>搜披露-沪深股市披露检查</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/SearchMain.css">
+	<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+	<script type="text/javascript" src="./js/SearchMain.js"></script>
+	<script type="text/javascript" src="./js/md5.js"></script>
+	<!--[if lte IE 9]>
+		<script src="./js/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div id="mask" class="wait" style="display: none">
+    <div style="position: fixed; width: 100%; height: 100%; opacity: 0.2; background-color: #222; z-index: 10"></div>
+    <div id="div_loading" style="position: fixed; z-index: 11">
+        <img src="http://www.soupilu.com/Content/load.gif"/>
+    </div>
+    <script>
+        $("#div_loading").css("top", (window.innerHeight / 2 - 68) + "px");
+        $("#div_loading").css("left", (window.innerWidth / 2 - 68) + "px");
+    </script>
+</div>
+<!-- Main Start -->
+<section class="mainWrap">
+	<!-- left Start -->
+	<section class="left-main">
+		<div class="main-top">
+			<!-- Search Start -->
+			<div class="search-wrap">
+				<form id="frm_search" action="">
+					<div class="left-search">
+						<div class="code-search" id="code_search">
+							<input id="input_stockcode" name="stock" class="code" type="text" placeholder="请输入公司代码" autocomplete="off">
+						</div>
+						<div class="date-select">
+							<input id="input_ds" name="startDate" type="text" class="date-input"><span class=""> ~ </span><input id="input_de" name="endDate" type="text" class="date-input">
+			            	<a class="date-text" id="date_text">...</a>
+							<ul id="lst_periods" class="lst_periods">
+			                    <li><a href="javascript:void(0)" class="date">最近一周</a></li>
+			                    <li><a href="javascript:void(0)" class="date">最近一月</a></li>
+			                    <li><a href="javascript:void(0)" class="date">最近三月</a></li>
+			                    <li><a href="javascript:void(0)" class="date">最近六月</a></li>
+			                    <li><a href="javascript:void(0)" class="date">最近一年</a></li>
+			                    <li><a href="javascript:void(0)" class="date">最近三年</a></li>
+			                    <li><a href="javascript:void(0)" class="date">2016年</a></li>
+			                    <li><a href="javascript:void(0)" class="date">2015年</a></li>
+			                    <li><a href="javascript:void(0)" class="date">2014年</a></li>
+			                    <li><a href="javascript:void(0)" class="date">2013年</a></li>
+			                    <li><a href="javascript:void(0)" class="date">全部时间</a></li>
+			            	</ul>
+						</div>
+					</div>
+					<div class="middle-search">
+						<div class="input-search" id="input_search">
+							<input id="input_ss" name="query" class="text-btn" type="text" placeholder="hah "><button id="btn_search" type="button" class="search-btn"><span class="search-bnt-icon"></span></button>
+						</div>
+						<div>
+						<div class="div-multi-item mb10">
+		                    <div class="item1">
+		                        <span>标题</span>
+		                        <input id="input_tm" name="titleMust" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
+		                    </div>
+		                    <div class="item2">
+		                        <input id="input_ts" name="titleShould" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
+		                    </div>
+		                    <div class="item3">
+		                        <input id="input_tn" name="titleMustNot" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
+		                    </div>
+		                </div>
+		                <div class="div-multi-item">
+		                    <div class="item1">
+		                        <span>正文</span>
+		                        <input id="input_cm" name="contentMust" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
+		                    </div>
+		                    <div class="item2">
+		                        <input id="input_cs" name="contentShould" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
+		                    </div>
+		                    <div class="item3">
+		                        <input id="input_cn" name="contentMustNot" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
+		                    </div>
+		                </div>
+						</div>
+					</div>
+					<div class="right-search">
+						<div class="senior-search">
+							<a id="senior_search" href="javascript:void(0)">高级<span class="search-icon"></span></a>
+						</div>
+						<div class="reset">
+							<a id="btn_reset" href="javascript:void(0)">重置</a>
+						</div>
+						<div class="senior-btn-wrap" id="senior_btn_wrap">
+							<button id="btn_senior_search" class="senior-btn"><span class="search-btn-icon"></span></button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- Search End -->
+		</div>
+		<!-- content Start -->
+		<!-- content End -->
+	</section>
+	<!-- left End -->
+</section>
+<!-- Main End -->
+</body>
+</html>

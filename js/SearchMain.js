@@ -67,13 +67,12 @@ var markets = [];
         e.stopPropagation();
 		$('#lst_periods').toggleClass('active');
 	});
-    $("input").on("keydown", function (e){
+    /*$("input").on("keydown", function (e){
         if (e.keyCode == 13) {
             $('#lst_periods').removeClass('active');
-            e.stopPropagation();
-            e.preventDefault();
+            //e.preventDefault();
         }
-    });
+    });*/
 
 	var today = new Date();
     var defaultDayStart = new Date(2000, 0, 1);
@@ -608,7 +607,6 @@ var markets = [];
    //发送搜索请求
    $('#frm_search').on('submit',function(e){
         e.preventDefault();
-        e.stopPropagation();
         search();
          
    })
@@ -616,6 +614,9 @@ var markets = [];
         e.preventDefault();
         search();
    })
-   
+   if ($("#input_tm").val() || $("#input_ts").val() || $("#input_tn").val() || $("#input_cm").val() || $("#input_cs").val() || $("#input_cn").val()) {
+        flagSingle = false;
+        $("#senior_search").trigger("click");
+    }
 });
     
