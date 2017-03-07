@@ -91,14 +91,14 @@
     });
     //兼容ie的输入框
     var ieSearchDisclosureAdjust = function (body) {
-        body.ss = (body.ss == "请输入标题或正文中的关键词（至少两个字），多个词以空格隔开") ? "" : body.ss;
-        body.tm = (body.tm == "必含关键词...") ? "" : body.tm;
-        body.ts = (body.ts == "可含关键词...") ? "" : body.ts;
-        body.tn = (body.tn == "不含关键词...") ? "" : body.tn;
-        body.cm = (body.cm == "必含关键词...") ? "" : body.cm;
-        body.cs = (body.cs == "可含关键词...") ? "" : body.cs;
-        body.cn = (body.cn == "不含关键词...") ? "" : body.cn;
-        body.c = (body.c == "公司代码/简称") ? "" : body.c;
+        body.query = (body.query == "请输入标题或正文中的关键词（至少两个字），多个词以空格隔开") ? "" : body.query;
+        body.titleMust = (body.titleMust == "必含关键词...") ? "" : body.titleMust;
+        body.titleShould = (body.titleShould == "可含关键词...") ? "" : body.titleShould;
+        body.contentMustNot = (body.contentMustNot == "不含关键词...") ? "" : body.contentMustNot;
+        body.contentMust = (body.contentMust == "必含关键词...") ? "" : body.contentMust;
+        body.contentShould = (body.contentShould == "可含关键词...") ? "" : body.contentShould;
+        body.contentMustNot = (body.contentMustNot == "不含关键词...") ? "" : body.contentMustNot;
+        body.stock = (body.stock == "公司代码/简称") ? "" : body.stock;
         return body;
     }  
 
@@ -123,6 +123,21 @@
         });
         return o;
     };
+    //单框搜索
+    var singleFilter = function (body) {
+        if (flagSingle) {
+            body.tm = '';
+            body.ts = '';
+            body.tn = '';
+            body.cm = '';
+            body.cs = '';
+            body.cn = '';
+            body.c = '';
+        } else {
+            body.ss = "";
+        }
+        return body;
+    }
     var abbr = function (str, length, appendString) {
         if (str.length > length + appendString.length - 1) {
             return str.substring(0, length) + appendString;
@@ -171,4 +186,39 @@
     }
     var connotate = function(uri) {
         return uri.replace("%", "%25");
+    }
+    var wait = function (option) {
+        if (option === "show") {
+            $(".wait").show();
+        } else {
+            $(".wait").hide();
+        }
+    }
+    var extractDate = function(str) {
+        return str.replace(regDate, "");
+    }
+    var regDate = new RegExp("T.*");
+    var regFloatPart = new RegExp("\\.\\d+$");
+    var regIntPart = new RegExp("^\\d+");
+    var formatThousand = function (number) {
+        if (number == 0) return "0";
+        if (!number) return "";
+        var str = number.toString();
+        str = str.replace(",", "");
+        var strInt, strFloat = "";
+        if (!regIntPart.test(str)) return "";
+        strInt = str.match(regIntPart)[0];
+        if (regFloatPart.test(str)) {
+            strFloat = str.match(regFloatPart)[0];
+        }
+        var digits = [];
+        for (var i = strInt.length - 1; i >= 0; i--) {
+            if ((strInt.length - i - 1) % 3 == 0 && i != strInt.length - 1) {
+                digits.unshift(",");
+            }
+            digits.unshift(strInt[i]);
+        }
+        strInt = digits.join("");
+        return strInt + strFloat;
+        return number;
     }

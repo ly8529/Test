@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>搜披露-沪深股市披露检查</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/SearchMain.css">
+	<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="./js/common.js"></script>
+	<script type="text/javascript" src="./js/md5.js"></script>
+	<!-- <script type="text/javascript" src="./js/SearchMain.js"></script> -->
+	<!--[if lte IE 9]>
+		<script src="./js/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<nav class="nav">
+	<a class="logo" href=""></a>
+	<ul class="top-nav">
+		<li class="active"><a href="SearchMain.html"><span class="icon hs"><em>hs</em></span>沪深</a></li>
+		<li><a href="SearchOtc.html"><span class="icon xs"><em>hs</em></span>新三板</a></li>
+		<li><a href="SearchUs.html"><span class="icon mg"><em>hs</em></span>美股</a></li>
+		<li><a href="SearchInteraction.html"><span class="icon hd"><em>hs</em></span>互动平台</a></li>
+		<li><a href="SearchLaw.html"><span class="icon fg"><em>hs</em></span>法规</a></li>
+		<li><a href="Help.html"><span class="icon bz"><em>hs</em></span>帮助</a></li>
+	</ul>
+	<div class="user-info">
+		<div class="my-collection"><a href=""><span class="collection-icon"></span>我的收藏</a></div>
+		<div class="history"><a href=""><span class="history-icon"></span>历史记录</a></div>
+		<div class="user-mes"><a href="">user-name</a></div>
+		<div class="logout"><a class="logout-icon" href=""></a></div>
+	</div>
+</nav>
+<!-- Nav End -->
+<!-- Main Start -->
+<section class="mainWrap">
+	<!-- right Start -->
+	<section class="right-filter">
+		<div class="filter-wrap">
+			<ul>
+				<li id="notice">
+					<a class="filter-title" href="javascript:void(0)"><span class="market-icon"></span>市场类型</a>
+					<div class="filter-list block">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+				<li id="arrMarkets">
+					<a class="filter-title" href="javascript:void(0)"><span class="notice-icon"></span>公告类型</a>
+					<div class="filter-list">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>	
+				</li>
+				<li id="industries">
+					<a class="filter-title" href="javascript:void(0)"><span class="industry-icon"></span>行业</a>
+					<div class="filter-list">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+				<li id="province">
+					<a class="filter-title" href="javascript:void(0)"><span class="local-icon"></span>地域</a>
+					<div class="filter-list">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+				<li id="company">
+					<a class="filter-title" href="javascript:void(0)"><span class="company-icon"></span>公司</a>
+					<div class="filter-list">
+						<a class="filter" href="">全部市场类型</a>
+						<a class="filter" href="">沪深主板</a>
+						<a class="filter" href="">深市主板</a>
+						<a class="filter" href="">深市中小板</a>
+						<a class="filter" href="">深市创业板</a>
+						<a class="filter" href="">深市全部</a>
+						<a class="filter" href="">深市主板和中小板</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!-- right End -->
+</section>
+<script type="text/javascript" src="./js/aside-right.js"></script>
+<!-- Main End -->
+</body>
+</html>

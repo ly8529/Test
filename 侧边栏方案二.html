@@ -3,33 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="renderer" content="webkit">
-	<meta http-equiv="Pragma" content="no-cache">
 	<title>搜披露-沪深股市披露检查</title>
 	<link rel="stylesheet" type="text/css" href="css/base.css">
-	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/侧边栏方案二.css">
 	<link rel="stylesheet" type="text/css" href="css/SearchMain.css">
 	<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>
 	<script type="text/javascript" src="./js/common.js"></script>
-	<script type="text/javascript" src="./js/SearchMain.js"></script>
+	<!-- <script type="text/javascript" src="./js/SearchMain.js"></script> -->
+	<script type="text/javascript" src="js/aside2.js"></script>
 	<script type="text/javascript" src="./js/md5.js"></script>
 	<!--[if lte IE 9]>
 		<script src="./js/html5shiv.min.js"></script>
 	<![endif]-->
 </head>
 <body>
-<div id="mask" class="wait" style="display: none">
-    <div style="position: fixed; width: 100%; height: 100%; opacity: 0.2; background-color: #222; z-index: 10"></div>
-    <div id="div_loading" style="position: fixed; z-index: 11">
-        <img src="http://www.soupilu.com/Content/load.gif"/>
-    </div>
-    <script>
-        $("#div_loading").css("top", (window.innerHeight / 2 - 68) + "px");
-        $("#div_loading").css("left", (window.innerWidth / 2 - 68) + "px");
-    </script>
-</div>
 <!-- Nav Start -->
 <nav class="nav">
 	<a class="logo" href=""></a>
@@ -56,13 +44,13 @@
 		<div class="main-top">
 			<!-- Search Start -->
 			<div class="search-wrap">
-				<form id="frm_search">
+				<div>
 					<div class="left-search">
 						<div class="code-search" id="code_search">
-							<input id="input_stockcode" name="stock" class="code" type="text" placeholder="请输入公司代码" autocomplete="off">
+							<input id="input_stockcode" name="c" class="code" type="text" placeholder="请输入公司代码" autocomplete="off">
 						</div>
 						<div class="date-select">
-							<input id="input_ds" name="startDate" type="text" class="date-input"><span class=""> ~ </span><input id="input_de" name="endDate" type="text" class="date-input">
+							<input id="input_ds" name="ds" type="text" class="date-input"><span class=""> ~ </span><input id="input_de" name="de" type="text" class="date-input">
 			            	<button class="date-text" id="date_text">...</button>
 							<ul id="lst_periods" class="lst_periods">
 			                    <li><a href="javascript:void(0)" class="date">最近一周</a></li>
@@ -81,31 +69,31 @@
 					</div>
 					<div class="middle-search">
 						<div class="input-search" id="input_search">
-							<input id="input_ss" name="query" class="text-btn" type="text" placeholder="hah "><button id="btn_search" type="submit" class="search-btn"><span class="search-bnt-icon"></span></button>
+							<input id="input_ss" class="text-btn" type="text" placeholder="hah "><button class="search-btn"><span class="search-bnt-icon"></span></button>
 						</div>
 						<div>
 						<div class="div-multi-item mb10">
 		                    <div class="item1">
 		                        <span>标题</span>
-		                        <input id="input_tm" name="titleMust" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
+		                        <input id="input_tm" name="tm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
 		                    </div>
 		                    <div class="item2">
-		                        <input id="input_ts" name="titleShould" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
+		                        <input id="input_ts" name="ts" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
 		                    </div>
 		                    <div class="item3">
-		                        <input id="input_tn" name="titleMustNot" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
+		                        <input id="input_tn" name="tn" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
 		                    </div>
 		                </div>
 		                <div class="div-multi-item">
 		                    <div class="item1">
 		                        <span>正文</span>
-		                        <input id="input_cm" name="contentMust" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
+		                        <input id="input_cm" name="cm" type="text" class="keyword"  placeholder="必含关键词..." autocomplete="off">
 		                    </div>
 		                    <div class="item2">
-		                        <input id="input_cs" name="contentShould" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
+		                        <input id="input_cs" name="cs" type="text" class="keyword" placeholder="可含关键词..." autocomplete="off">
 		                    </div>
 		                    <div class="item3">
-		                        <input id="input_cn" name="contentMustNot" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
+		                        <input id="input_cn" name="cn" type="text" class="keyword" placeholder="不含关键词..." autocomplete="off">
 		                    </div>
 		                </div>
 						</div>
@@ -118,20 +106,20 @@
 							<a id="btn_reset" href="javascript:void(0)">重置</a>
 						</div>
 						<div class="senior-btn-wrap" id="senior_btn_wrap">
-							<button id="btn_senior_search" class="senior-btn"><span class="search-btn-icon"></span></button>
+							<button id="senior_btn" class="senior-btn"><span class="search-btn-icon"></span></button>
 						</div>
 					</div>
-				</form>
-				<div class="label-wrap" id="label_wrap">
-					<a class="filter-label market" href="javascript:void(0)"><span class="filter-value">市场</span><span class="filter-close">x</span></a>
-					<a class="filter-label notice" href="javascript:void(0)"><span class="filter-value">市场</span><span class="filter-close">x</span></a>
-					<a class="filter-label industry" href="javascript:void(0)"><span class="filter-value">市场</span><span class="filter-close">x</span></a>
-					<a class="filter-label local" href="javascript:void(0)"><span class="filter-value">市场</span><span class="filter-close">x</span></a>
-					<a class="filter-label company" href="javascript:void(0)"><span class="filter-value">市场</span><span class="filter-close">x</span></a>
 				</div>
-				<input id="sure_btn" class="btn" type="button" value="确定">
-			</div>
+				<div class="label-wrap" id="label_wrap">
+				<a class="filter-label market" href="javascript:void(0)">市场<span class="filter-close">x</span></a>
+				<a class="filter-label notice" href="javascript:void(0)">公告<span class="filter-close">x</span></a>
+				<a class="filter-label industry" href="javascript:void(0)">行业<span class="filter-close">x</span></a>
+				<a class="filter-label local" href="javascript:void(0)">地域<span class="filter-close">x</span></a>
+				<a class="filter-label company" href="javascript:void(0)">公司<span class="filter-close">x</span></a>
+				</div>
+				<input id="sure_btn" class="btn" type="submit" value="确定">
 			<!-- Search End -->
+			</div>
 		</div>
 		<!-- content Start -->
 		<div class="content">
@@ -144,7 +132,7 @@
 						<a href="">关于推进传统基础设施领域政府和社会资本合作（PPP）项目资产证券化业务的通知</a><span>2017-2-21</span>
 					</li>
 				</ul>
-				<a id="getMore" href="javascript:void(0)" class="getMore">查看更多</a>
+				<a href="" class="getMore">查看更多</a>
 			</div>
 		</div>
 		<div class="result">
@@ -157,17 +145,56 @@
 				</div>
 			</div>
 			<div class="result-show">
-				<div id="div_result_0" class="result-area temp">
+				<div id="div_result_0" class="result-area bg temp">
 					<div class="result-item">
-						<a class="stock" href=""></a>
-						<a class="title" href=""></a><span></span>
+						<a class="stock" href="">888888</a>
+						<a class="title" href="">世纪优优：【临时公告】世纪优优：股票发行方案</a><span>2017-2-24</span>
 						<a class="source" href=""></a>
 					</div>
 					<div class="paras-wrap">
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+					</div>
+				</div>
+				<div id="div_result_1" class="result-area temp">
+					<div class="result-item">
+						<a class="stock" href="">888888</a>
+						<a class="title" href="">世纪优优：【临时公告】世纪优优：股票发行方案</a><span>2017-2-24</span>
+						<a class="source" href=""></a>
+					</div>
+					<div class="paras-wrap hideSelf">
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
+						<p class="para">
+							证券代码：002608 证券简称：*ST舜船 公告编号：2017-020
+						</p>
 					</div>
 				</div>
 				<div class="result-pages" id="div_pages">
 					<button id="btn_loadPrior" class="btn-loadPrior"><<</button>
+					<button class="foot-page">1</button>
+					<button class="foot-page">2</button>
+					<button class="foot-page">3</button>
+					<button class="foot-page">4</button>
+					<button class="foot-page">5</button>
 					<button id="btn_loadNext" class="btn-loadNext">>></button>
 					<span id="total_page">共333页</span>
 				</div>
@@ -180,7 +207,7 @@
 	<section class="right-filter">
 		<div class="filter-wrap">
 			<ul>
-				<li id="markets">
+				<li id="notice">
 					<a class="filter-title" href="javascript:void(0)"><span class="market-icon"></span>市场类型</a>
 					<div class="filter-list block">
 						<a class="filter" href="">全部市场类型</a>
@@ -195,7 +222,7 @@
 						<a class="filter" href="">深市主板和中小板</a>
 					</div>
 				</li>
-				<li id="notices">
+				<li id="arrMarkets">
 					<a class="filter-title" href="javascript:void(0)"><span class="notice-icon"></span>公告类型</a>
 					<div class="filter-list">
 						<a class="filter" href="">全部市场类型</a>
@@ -248,6 +275,7 @@
 	</section>
 	<!-- right End -->
 </section>
+
 <!-- Main End -->
 </body>
 </html>

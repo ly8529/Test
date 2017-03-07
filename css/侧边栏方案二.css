@@ -161,8 +161,10 @@ em {
   min-height: 500px;
   color: black;
 }
-.right-filter .filter-wrap ul li {
+.right-filter .filter-wrap ul {
   position: relative;
+}
+.right-filter .filter-wrap ul li {
   margin-bottom: 10px;
 }
 .right-filter .filter-wrap ul li .filter-title {
@@ -475,9 +477,6 @@ em {
   color: #fff;
   border-radius: 3px;
 }
-.mainWrap .left-main .label-wrap .filter-label .filter-value {
-  cursor: default;
-}
 .mainWrap .left-main .label-wrap .filter-label .filter-close {
   position: absolute;
   display: inline-block;
@@ -606,9 +605,6 @@ em {
   border-radius: 3px;
   background-color: #fff;
 }
-.result .result-show .temp {
-  display: none;
-}
 .result .result-show .result-area {
   margin-bottom: 10px;
   background-color: #fff;
@@ -656,7 +652,6 @@ em {
   background: url('../img/sprite1.png') no-repeat 0 -113px;
 }
 .result .result-show .result-area .paras-wrap {
-  display: none;
   padding: 0 20px 8px;
   background: #f5f5f5;
   line-height: 20px;
@@ -668,12 +663,12 @@ em {
   text-align: justify;
   border-bottom: 1px solid #dbe0e4;
 }
-.result .result-show .result-item:hover,
-.result .result-show .result-item.bg {
+.result .result-show .result-area:hover,
+.result .result-show .result-area.bg {
   background-color: #edefef;
 }
-.result .result-show .result-item:hover .stock,
-.result .result-show .result-item.bg .stock {
+.result .result-show .result-area:hover .stock,
+.result .result-show .result-area.bg .stock {
   background: #fff;
 }
 .result .result-pages {
@@ -778,12 +773,11 @@ em {
 .panel-wrap {
   display: none;
   position: absolute;
-  max-height: 348px;
   padding: 10px 0 10px 10px;
   left: -626px;
+  top: -10px;
   background-color: #fff;
   border: 1px solid #dbe0e4;
-  overflow-y: auto;
   z-index: 100;
 }
 .panel-wrap .panel-item {
@@ -814,7 +808,7 @@ em {
   width: 50px;
   height: 26px;
   margin-right: 10px;
-  background: #dbe0e4;
+  background: #999;
   border-radius: 3px;
   text-align: center;
 }
@@ -824,13 +818,13 @@ em {
   width: 594px;
   padding: 10px;
   margin-bottom: 6px;
-  border: 1px  solid #dbe0e4;
+  border: 1px solid #dbe0e4;
   background-color: #fff;
   z-index: 300;
   text-align: justify;
 }
 .panel-wrap .panel-item .panel-list .second-wrap a.filter {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 .panel-wrap .panel-item .panel-list .second-wrap.left:after {
   content: '';
